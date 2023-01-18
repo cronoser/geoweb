@@ -11,7 +11,7 @@ function addEdificiosCapa() {
     "id": "edificios",
     "type": "fill-extrusion",
     "source": "edificios_source",
-    "source-layer": "contrucciones-ds64ca", // Nuestro nombre Tileset
+    "source-layer": "construcciones-ds64ca", // Nuestro nombre Tileset
     "maxzoom": 21,
     "minzoom": 15,
     // "filter": [">", "numberOfFl", 0],
