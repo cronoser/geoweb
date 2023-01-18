@@ -7,33 +7,36 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
     <link href='css/estilobase.css' rel='stylesheet' />
 
-
+    <script src='js/edificios.js'></script> <!-- llamamos al fichero edificios.js-->
     <script>
         //Añadir vuestor token y/o estilo !!
         var map;
         function init() {
             mapboxgl.accessToken =
-                'pk.eyJ1IjoiZ2lzbWFzdGVybTIiLCJhIjoiY2plZHhubTQxMTNoYzMza3Rqa3kxYTdrOCJ9.53B1E6mKD_EQOVb2Y0-SsA';
+                'pk.eyJ1IjoiY3Jvbm9zZXIxIiwiYSI6ImNsY3oxbmM4dTJpdnczcm1zN3Exc3RyMDcifQ.UYUlgPFANSfaK4YmcUDF1g';
              map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/dark-v10',
                 center: [2.16859, 41.3954],
                 zoom: 15,
                 attributionControl: false,
-                pitch: 45,
+                pitch: 45, //es la inclinación del visor
                 hash: true
             });
 
             map.addControl(new mapboxgl.AttributionControl({ compact: true }));
             map.addControl(new mapboxgl.NavigationControl());
 
+            map.on('load', function () {
+                addEdificiosCapa();
+            }); //fin onload
+
         } // final init
     </script>
     </head>
 
     <body onload="init()">
-
         <div id="map"></div>
     </body>
 
-    </html>
+</html>
