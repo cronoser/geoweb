@@ -18,7 +18,7 @@ function add3D() {
 
     //edificios de los estilos Mapbox
 
-/*
+
     map.addLayer({
             'id': '3d-buildings',
             'source': 'composite',
@@ -33,7 +33,7 @@ function add3D() {
             }
         });
 
-*/
+
 
 
 
