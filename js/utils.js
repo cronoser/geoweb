@@ -27,9 +27,9 @@ function addPopupToMap(nombreCapa) {
 
       var text = "";
       //console.info(e);
-      for (key in e.features[0].properties) {
+      for (key in e.features[0].properties) { //aquí contatena valores
 
-        text += "<b>" + key + "</b>:" + e.features[0].properties[key] + "<br>";
+        text += "<b>" + key + "</b>:" + e.features[0].properties[key] + "<br>"; 
       }
 
       popup.setLngLat(e.lngLat)

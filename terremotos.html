@@ -21,6 +21,7 @@
                     zoom: 5.5,
                     hash: true,
                     pitch: 0,
+                    projection: 'globe',
                     attributionControl: false
                 });
                 map.addControl(new mapboxgl.AttributionControl({
@@ -28,12 +29,41 @@
                 }));
                 map.addControl(new mapboxgl.NavigationControl());           
 
+                map.on("load", function () {
+                        map.setFog({}); //activa la niebla de fondo en la vista globo
+                        addPlacas(); //llama a la función que muestra las placas tectónicas
+                    generarPeticionTerremotos();
+                    addPopupToMap("terremotos");
+
+                }); // fin load mapa
+
+                map.on("zoomend", function () {
+
+                    generarPeticionTerremotos();
+                });
+
+                map.on("moveend", function () {
+
+                    generarPeticionTerremotos();
+                });
+
             } //fin init
 
         </script>
     </head>
 
+   
     <body onload="init()">
+        <div class="panelTopIzquierda">
+            <select id="mag" onchange="generarPeticionTerremotos()">
+                <option value="3">Magnitud 3</option>
+                <option selected value="5">Magnitud 5</option>
+                <option value="6">Magnitud 6</option>
+                <option value="7">Magnitud 7</option>
+                <option value="8">Magnitud 8</option>
+            </select>
+        </div>
+        
         <div id='map'></div>
     </body>
 
