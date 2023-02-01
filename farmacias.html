@@ -49,8 +49,8 @@
 
                 map.on("load", function () {
                     // reutilizamos funcion de utils para obtener geojson
-                    enviarPeticion("datos/farmacias.geojson").then(function (datos) {
-                        farmaciasGeoJSON = datos;
+                    enviarPeticion("datos/farmacias.geojson").then(function (datos) { //AQUÍ LLAMA AL FICHERO loquesea.GEOJSON DE DONDE COGER LOS DATOS
+                        farmaciasGeoJSON = datos; //Los datos se cargan en la variable farmaciasGeoJSON
                         addFarmacias();
                         addPopupToMap("farmacias"); //Saca un PopUp con la información de las farmacias
                         

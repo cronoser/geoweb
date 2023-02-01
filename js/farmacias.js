@@ -1,12 +1,12 @@
 function addFarmacias() {
 
-    //var url = 'datos/farmacias.geojson';
+    //var url = 'datos/farmacias.geojson'; //Si tuvieramos que trabajar con ficheros locales
     var url = farmaciasGeoJSON;
-    //var url = 'datos/uruguay.GeoJSON'; 
-
+    
     map.addSource('farmacias', {
         type: 'geojson',
-        data: url
+        //data: url, //Es mejor definirlos de la siguiente forma
+        data: farmaciasGeoJSON
     });
 
     map.addLayer({
