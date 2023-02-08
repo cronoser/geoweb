@@ -38,6 +38,7 @@
                 style: 'mapbox://styles/mapbox/satellite-streets-v11',
                 center: [2.16859, 41.3954], //zoom en Barcelona
                 zoom: 12,
+                projection: 'globe', //añadimos la busqueda globo 
                 attributionControl: false,
                 hash: true
             });
@@ -75,7 +76,11 @@
             });
 
             map.on("load", function () { //carga el mapa
+                add3D("mapbox-dem"); //añadimos el terreno 3D mundial
+                
                 getFeaturesFGB(url, minZoom);
+
+                map.setFog({}); //añadimos el fog a la vista globe
             });
 
             map.on("moveend", function () { //cada vez que se mueve carga el mapa
