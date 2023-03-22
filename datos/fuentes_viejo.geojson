@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-ide",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2023-03-22T01:37:24Z",
+  "timestamp": "2023-03-21T22:37:21Z",
   "features": [
     {
       "type": "Feature",
@@ -31859,22 +31859,6 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/6331199135",
-        "amenity": "drinking_water",
-        "natural": "spring"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7436636,
-          41.681999
-        ]
-      },
-      "id": "node/6331199135"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "node/6331199136",
         "amenity": "drinking_water"
       },
@@ -39475,22 +39459,6 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/9140215117",
-        "amenity": "drinking_water",
-        "man_made": "water_tap"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.769788,
-          41.7319549
-        ]
-      },
-      "id": "node/9140215117"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "node/9162156262",
         "amenity": "drinking_water"
       },
@@ -39538,22 +39506,6 @@
         ]
       },
       "id": "node/9163077095"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/9167958615",
-        "amenity": "drinking_water",
-        "man_made": "water_tap"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7783892,
-          41.7335819
-        ]
-      },
-      "id": "node/9167958615"
     },
     {
       "type": "Feature",
@@ -41544,111 +41496,6 @@
         ]
       },
       "id": "node/10750377822"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/10751864202",
-        "amenity": "drinking_water"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.6939593,
-          42.5371621
-        ]
-      },
-      "id": "node/10751864202"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/10751919174",
-        "amenity": "drinking_water"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7867916,
-          41.8308532
-        ]
-      },
-      "id": "node/10751919174"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/10751919181",
-        "amenity": "drinking_water"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7291343,
-          41.8602389
-        ]
-      },
-      "id": "node/10751919181"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/10751919195",
-        "amenity": "drinking_water"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7290639,
-          41.862167
-        ]
-      },
-      "id": "node/10751919195"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/10751927918",
-        "amenity": "drinking_water"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7960095,
-          41.8840916
-        ]
-      },
-      "id": "node/10751927918"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/10751927939",
-        "amenity": "drinking_water"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7945345,
-          41.884287
-        ]
-      },
-      "id": "node/10751927939"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/10752008307",
-        "amenity": "drinking_water"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7517487,
-          41.7587301
-        ]
-      },
-      "id": "node/10752008307"
     }
   ]
 }
