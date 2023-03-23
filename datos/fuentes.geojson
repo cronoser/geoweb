@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-ide",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2023-03-23T01:39:59Z",
+  "timestamp": "2023-03-23T01:55:01Z",
   "features": [
     {
       "type": "Feature",
@@ -41757,6 +41757,37 @@
         ]
       },
       "id": "node/10754814193"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10754832074",
+        "amenity": "drinking_water",
+        "man_made": "water_tap"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9331949,
+          41.754105
+        ]
+      },
+      "id": "node/10754832074"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10754832083",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9321127,
+          41.7525991
+        ]
+      },
+      "id": "node/10754832083"
     },
     {
       "type": "Feature",
