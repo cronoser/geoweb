@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-ide",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2023-03-22T01:37:24Z",
+  "timestamp": "2023-03-23T01:39:59Z",
   "features": [
     {
       "type": "Feature",
@@ -5142,6 +5142,24 @@
         ]
       },
       "id": "node/1875597831"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1878572287",
+        "amenity": "drinking_water",
+        "man_made": "water_tap",
+        "name": "Fuente",
+        "natural": "spring"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.4608729,
+          41.6215563
+        ]
+      },
+      "id": "node/1878572287"
     },
     {
       "type": "Feature",
@@ -37970,8 +37988,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -3.9926765,
-          41.6876528
+          -3.992698,
+          41.6876768
         ]
       },
       "id": "node/7998300420"
@@ -41649,6 +41667,172 @@
         ]
       },
       "id": "node/10752008307"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10753332576",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1347776,
+          42.414317
+        ]
+      },
+      "id": "node/10753332576"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10753986064",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.8516039,
+          42.0100021
+        ]
+      },
+      "id": "node/10753986064"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10753995213",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.8233175,
+          41.9832112
+        ]
+      },
+      "id": "node/10753995213"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10753995214",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.8470949,
+          41.9742123
+        ]
+      },
+      "id": "node/10753995214"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10754814192",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9960368,
+          41.756817
+        ]
+      },
+      "id": "node/10754814192"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10754814193",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9931011,
+          41.6878931
+        ]
+      },
+      "id": "node/10754814193"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10754844209",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9904048,
+          41.7141919
+        ]
+      },
+      "id": "node/10754844209"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10754844218",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9928959,
+          41.6419651
+        ]
+      },
+      "id": "node/10754844218"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10754844237",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.963748,
+          41.6120467
+        ]
+      },
+      "id": "node/10754844237"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10754844238",
+        "amenity": "drinking_water",
+        "natural": "spring"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.757461,
+          41.5294823
+        ]
+      },
+      "id": "node/10754844238"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10754844275",
+        "amenity": "drinking_water"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7538749,
+          41.527135
+        ]
+      },
+      "id": "node/10754844275"
     }
   ]
 }
