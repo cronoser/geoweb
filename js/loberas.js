@@ -17,7 +17,7 @@ var config = {
             hidden: false,
             title: 'Lobera Monte Santiago',
             image: 'https://www.lasmerindades.com/sites/merindades/files/styles/slide_cabecera/public/lobera.jpg',
-            description: 'También conocido como Eyjafjöll,2​ o Eyjafjalla,3​ es un volcán situado al norte de Skógar, en la región de Suðurland, al sur de Islandia.4​ Tiene entre 1651 m y 1666 m de altitud,​ y ha estado moderadamente activo en los últimos 8000 años.',
+            description: 'Dentro del paraje natural Monte Santiago y junto a la cáscada mas alta de España. Se trata de una lobera excepcional, ya que uno de los muros da lugar a dos loberas, una en cada extremo',
             location: {
                 center: [-2.9838734, 42.940537],
                 zoom: 16,
@@ -42,6 +42,27 @@ var config = {
             ]
         },{
             id: 'lobera2',
+            alignment: 'left',
+            hidden: false,
+            title: 'Lobera2',
+            image: 'https://www.lasmerindades.com/sites/merindades/files/styles/slide_cabecera/public/lobera.jpg',
+            description: 'Dentro del paraje natural Monte Santiago y junto a la cáscada mas alta de España. Se trata de una lobera excepcional, ya que uno de los muros da lugar a dos loberas, una en cada extremo',
+            location: {
+                center: [-2.9838734, 45.940537],
+                zoom: 16,
+                pitch: 60,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [
+            ],
+            onChapterExit: [
+            ]
+        }
+        /*,{
+            id: 'lobera2',
             alignment: 'right',
             hidden: false,
             title: 'Lobera de la Barrerilla',
@@ -51,13 +72,13 @@ var config = {
                 center: [-3.2940803, 42.9545148],
                 zoom: 16,
                 pitch: 60,
-                bearing: 0
+                bearing: 45
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
-        }
+        }*/
     ]
 };
