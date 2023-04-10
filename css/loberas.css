@@ -60,12 +60,12 @@
             margin: auto;
         }
         .light {
-            color: #444;
+            color: #138d75;
             background-color: #fafafa;
         }
         .dark {
             color: #fafafa;
-            background-color: #444;
+            background-color: #138d75;
         }
         .step {
             padding-bottom: 50vh;
