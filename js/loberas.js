@@ -1,6 +1,5 @@
 var config = {
-    style: 'mapbox://styles/cronoser1/clg6hi5hh002101qx9ovtvu3a',
-    // style: 'mapbox://styles/mapbox/satellite-v9', //estilo original
+    style: 'mapbox://styles/mapbox/satellite-v9',
     accessToken: 'pk.eyJ1IjoiY3Jvbm9zZXIxIiwiYSI6ImNsY3oxbmM4dTJpdnczcm1zN3Exc3RyMDcifQ.UYUlgPFANSfaK4YmcUDF1g',
     showMarkers: false,
     markerColor: '#3FB1CE',
@@ -17,12 +16,13 @@ var config = {
             hidden: false,
             title: 'Lobera Monte Santiago',
             image: 'https://www.lasmerindades.com/sites/merindades/files/styles/slide_cabecera/public/lobera.jpg',
-            description: 'Dentro del paraje natural Monte Santiago y junto a la cáscada mas alta de España. Se trata de una lobera excepcional, ya que uno de los muros da lugar a dos loberas, una en cada extremo',
+            description: 'Dentro del Monumento Natural Monte Santiago y junto a la cáscada mas alta de España. Se trata de una lobera excepcional, ya que uno de los muros da lugar a dos loberas, una en cada extremo. Se trata de la mas grande de una total de 4 loberas en el mismo enclave.',
+            video: src='https://www.youtube.com/watch?v=nDleb4WGeqQ',
             location: {
-                center: [-2.9838734, 42.940537],
-                zoom: 16,
-                pitch: 60,
-                bearing: 0
+                center: [-2.9855180842918685, 42.936710456036366],
+                zoom: 18,
+                pitch: 30,
+                bearing: -40
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
@@ -44,41 +44,128 @@ var config = {
             id: 'lobera2',
             alignment: 'left',
             hidden: false,
-            title: 'Lobera2',
-            image: 'https://www.lasmerindades.com/sites/merindades/files/styles/slide_cabecera/public/lobera.jpg',
-            description: 'Dentro del paraje natural Monte Santiago y junto a la cáscada mas alta de España. Se trata de una lobera excepcional, ya que uno de los muros da lugar a dos loberas, una en cada extremo',
+            title: 'Lobera de San Miguel',
+            image: 'https://3.bp.blogspot.com/-tcD4FfL14cg/WRGIlavOM1I/AAAAAAAAYSw/hL77ACxsDIYtpEaV_CqdDpywFypOxPAzwCKgB/s1600/lobera%2Bsan%2Bmiguel%2B3.jpg',
+            description: 'Situada en la misma sierra que la lobera de Monte Santiago pero unos kilómetros al oeste encontramos los restos no muy bien conservados de una antigua lobera que coge su nombre de la cueva de San Miguel el viejo.',
             location: {
-                center: [-2.9838734, 45.940537],
-                zoom: 16,
-                pitch: 60,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: true,
-            callback: '',
-            onChapterEnter: [
-            ],
-            onChapterExit: [
-            ]
-        }
-        /*,{
-            id: 'lobera2',
-            alignment: 'right',
-            hidden: false,
-            title: 'Lobera de la Barrerilla',
-            image: 'https://3.bp.blogspot.com/-9VwQP5A_8Zs/Vk-kMftrfQI/AAAAAAAABc8/U71U3IDuggc/s640/lobera%2Bde%2Bla%2Bbarrerilla%2B3.JPG',
-            description: 'Es un volcán activo del tipo vesubiano situado frente a la bahía de Nápoles y a unos nueve kilómetros de distancia de la ciudad de Nápoles. Se encuentra en la ciudad metropolitana de Nápoles, perteneciente a la región italiana de la Campania. Tiene una altura máxima de 1281 m s. n. m. y se alza al sur de la cadena principal de los Apeninos.',
-            location: {
-                center: [-3.2940803, 42.9545148],
-                zoom: 16,
-                pitch: 60,
-                bearing: 45
+                center: [-3.1722287459473932, 43.01701514669193],
+                zoom: 18,
+                pitch: 45,
+                bearing: 180
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
-        }*/
+        },{
+            id: 'lobera3',
+            alignment: 'left',
+            hidden: false,
+            title: 'Lobera de la Barrerilla',
+            image: 'https://3.bp.blogspot.com/-9VwQP5A_8Zs/Vk-kMftrfQI/AAAAAAAABc8/U71U3IDuggc/s640/lobera%2Bde%2Bla%2Bbarrerilla%2B3.JPG',
+            description: 'Lobera en la localidad de Perex en muy buen estado de conservación.',
+            location: {
+                center: [-3.2940803, 42.9545148],
+                zoom: 17,
+                pitch: 60,
+                bearing: -43.2
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },{
+            id: 'lobera4',
+            alignment: 'right',
+            hidden: false,
+            title: 'Lobera del Toyo',
+            image: 'https://3.bp.blogspot.com/-pevNU_W2veA/WUldOFuYtyI/AAAAAAAAYeo/SSchWvg3FgIl9QBgHaQraNv4E_viKf6UwCKgBGAs/s1600/Imagen1.jpg',
+            description: 'Situada en el valle del río Jerea como la anterior, apenas visible desde fotos de satélite por la vegetación. Su estado de conservación no es bueno.',
+            location: {
+                center: [-3.2545765, 42.941628],
+                zoom: 18,
+                pitch: 15,
+                bearing: 200
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },{
+            id: 'lobera5',
+            alignment: 'left',
+            hidden: false,
+            title: 'Lobera de la Barrerilla',
+            image: 'https://3.bp.blogspot.com/-9VwQP5A_8Zs/Vk-kMftrfQI/AAAAAAAABc8/U71U3IDuggc/s640/lobera%2Bde%2Bla%2Bbarrerilla%2B3.JPG',
+            description: 'Lobera en la localidad de Perex en muy buen estado de conservación.',
+            location: {
+                center: [-3.2940803, 42.9545148],
+                zoom: 17,
+                pitch: 60,
+                bearing: -43.2
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },{
+            id: 'lobera6',
+            alignment: 'right',
+            hidden: false,
+            title: 'Lobera de San Miguel',
+            image: 'https://3.bp.blogspot.com/-9VwQP5A_8Zs/Vk-kMftrfQI/AAAAAAAABc8/U71U3IDuggc/s640/lobera%2Bde%2Bla%2Bbarrerilla%2B3.JPG',
+            description: 'Lobera en la localidad de Perex, de las que se  en muy buen estado de conservación.',
+            location: {
+                center: [-3.2940803, 42.9545148],
+                zoom: 17,
+                pitch: 60,
+                bearing: -43.2
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },{
+            id: 'lobera7',
+            alignment: 'left',
+            hidden: false,
+            title: 'Lobera de la Barrerilla',
+            image: 'https://3.bp.blogspot.com/-9VwQP5A_8Zs/Vk-kMftrfQI/AAAAAAAABc8/U71U3IDuggc/s640/lobera%2Bde%2Bla%2Bbarrerilla%2B3.JPG',
+            description: 'Lobera en la localidad de Perex en muy buen estado de conservación.',
+            location: {
+                center: [-3.2940803, 42.9545148],
+                zoom: 17,
+                pitch: 60,
+                bearing: -43.2
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },{
+            id: 'lobera8',
+            alignment: 'right',
+            hidden: false,
+            title: 'Callejo de los Lobos',
+            image: 'http://3.bp.blogspot.com/-mwp60Hkd3lQ/Uyq5A-9mPwI/AAAAAAAAPzo/_hRT8ku51kI/s1600/00D.jpg',
+            description: 'Situado encima del anticlinal de la Hoya de Huidobro y dentro del Parque Natural Hoces del Alto Ebro y Rudrón.',
+            location: {
+                center: [-3.6734568030152843, 42.75709347924416],
+                zoom: 17,
+                pitch: 60,
+                bearing: -43.2
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        }
     ]
 };
