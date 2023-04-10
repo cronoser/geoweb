@@ -6,7 +6,7 @@ var config = {
     theme: 'dark',
     use3dTerrain: true,
     title: 'Loberas',
-    subtitle: 'Un paseo por las loberas de la comarca de Las Merindades (Bugos)',
+    subtitle: 'Un paseo por las loberas de la comarca de Las Merindades (Burgos)',
     byline: 'M2B ',
     footer: 'Source: Wikipedia',
     chapters: [
