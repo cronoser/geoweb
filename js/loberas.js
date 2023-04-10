@@ -12,7 +12,7 @@ var config = {
     chapters: [
         {
             id: 'lobera1',
-            alignment: 'left',
+            alignment: 'right',
             hidden: false,
             title: 'Lobera Monte Santiago',
             image: 'https://www.lasmerindades.com/sites/merindades/files/styles/slide_cabecera/public/lobera.jpg',
@@ -98,14 +98,14 @@ var config = {
             id: 'lobera5',
             alignment: 'left',
             hidden: false,
-            title: 'Lobera de la Barrerilla',
-            image: 'https://3.bp.blogspot.com/-9VwQP5A_8Zs/Vk-kMftrfQI/AAAAAAAABc8/U71U3IDuggc/s640/lobera%2Bde%2Bla%2Bbarrerilla%2B3.JPG',
-            description: 'Lobera en la localidad de Perex en muy buen estado de conservación.',
+            title: 'Lobera del alto del Caballo',
+            image: 'http://1.bp.blogspot.com/-5uugB230T60/VCQCfKQUqbI/AAAAAAAARZc/g0cz6FJf_WM/s1600/14.JPG',
+            description: 'completar texto.',
             location: {
-                center: [-3.2940803, 42.9545148],
-                zoom: 17,
+                center: [-3.5295970127630483, 43.117573962793244],
+                zoom: 18,
                 pitch: 60,
-                bearing: -43.2
+                bearing: 240
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
@@ -116,14 +116,14 @@ var config = {
             id: 'lobera6',
             alignment: 'right',
             hidden: false,
-            title: 'Lobera de San Miguel',
-            image: 'https://3.bp.blogspot.com/-9VwQP5A_8Zs/Vk-kMftrfQI/AAAAAAAABc8/U71U3IDuggc/s640/lobera%2Bde%2Bla%2Bbarrerilla%2B3.JPG',
-            description: 'Lobera en la localidad de Perex, de las que se  en muy buen estado de conservación.',
+            title: 'Lobera de Castrobarto',
+            image: 'http://4.bp.blogspot.com/-nE-1UBQYpcI/Vg5jeFx-cNI/AAAAAAAAUNw/jF97Ln_bH2s/s1600/16.JPG',
+            description: 'Lorem ipsum',
             location: {
-                center: [-3.2940803, 42.9545148],
-                zoom: 17,
-                pitch: 60,
-                bearing: -43.2
+                center: [-3.3729337, 43.0794536],
+                zoom: 18,
+                pitch: 30,
+                bearing: 40
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
@@ -132,24 +132,6 @@ var config = {
             onChapterExit: []
         },{
             id: 'lobera7',
-            alignment: 'left',
-            hidden: false,
-            title: 'Lobera de la Barrerilla',
-            image: 'https://3.bp.blogspot.com/-9VwQP5A_8Zs/Vk-kMftrfQI/AAAAAAAABc8/U71U3IDuggc/s640/lobera%2Bde%2Bla%2Bbarrerilla%2B3.JPG',
-            description: 'Lobera en la localidad de Perex en muy buen estado de conservación.',
-            location: {
-                center: [-3.2940803, 42.9545148],
-                zoom: 17,
-                pitch: 60,
-                bearing: -43.2
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: true,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },{
-            id: 'lobera8',
             alignment: 'right',
             hidden: false,
             title: 'Callejo de los Lobos',
