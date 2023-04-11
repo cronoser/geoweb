@@ -64,7 +64,7 @@ var config = {
             hidden: false,
             title: 'Lobera de la Barrerilla',
             image: 'https://3.bp.blogspot.com/-9VwQP5A_8Zs/Vk-kMftrfQI/AAAAAAAABc8/U71U3IDuggc/s640/lobera%2Bde%2Bla%2Bbarrerilla%2B3.JPG',
-            description: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/cLnal5LroJQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>',
+            description: '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/cLnal5LroJQ?controls=0autohide=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
             location: {
                 center: [-3.2940803, 42.9545148],
                 zoom: 17,
@@ -138,8 +138,8 @@ var config = {
             image: 'http://3.bp.blogspot.com/-mwp60Hkd3lQ/Uyq5A-9mPwI/AAAAAAAAPzo/_hRT8ku51kI/s1600/00D.jpg',
             description: 'Situado encima del anticlinal de la Hoya de Huidobro y dentro del Parque Natural Hoces del Alto Ebro y Rudrón.',
             location: {
-                center: [-3.6734568030152843, 42.75709347924416],
-                zoom: 17,
+                center: [-3.673628978468116,42.75649007929499],
+                zoom: 17.5,
                 pitch: 60,
                 bearing: -43.2
             },
