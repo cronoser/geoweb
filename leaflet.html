@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leaflet Map Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+                    /* Apply a universal box-sizing value to all elements */
+            * {
+                box-sizing: border-box;
+            }
+
+            /* Apply some basic styling to the body */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            /* Apply some basic styling to the map div */
+            #map {
+                height: 500px;
+                margin: 20px;
+            }
+
+            /* Style the popup content */
+            .leaflet-popup-content {
+                max-width: 200px;
+            }
+
+            /* Style the popup close button */
+            .leaflet-popup-close-button {
+                color: #333;
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            /* Style the marker icon */
+            .leaflet-marker-icon {
+                color: #333;
+                font-size: 24px;
+                line-height: 1.5;
+                text-align: center;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background-color: #fff;
+                border: 2px solid #333;
+            }
+
+            /* Style the marker icon on hover */
+            .leaflet-marker-icon:hover {
+                background-color: #333;
+                color: #fff;
+            }
+        </style>
+        <!-- Load Leaflet from CDN -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-8QQ/L3V4L2N4Nj6VGJU6N0CCpT/FJ1R/wxV/4u0J9zc7VQPk/i6Uss7CKuJc56T" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-HwIeN7xQZbEr9rl5Djg/xIRtWyrdP5IFyFzKJb5iufgdA0AzpWkZ8iXG/9cH2Atn" crossorigin=""></script>
+
+        <!-- Load GeoJSON data -->
+        <script src="datos/map.geojson"></script>
+
+        <style>
+        #map {
+            height: 500px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      // Initialize the map
+      var map = L.map("map").setView([40.7128, -74.006], 10);
+
+      // Add a base tile layer
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      // Add the GeoJSON layer
+      L.geoJSON(data).addTo(map);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2023-04-11T21:16:22Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1743121258",
+        "alt_name": "Lobera de la Barrerilla",
+        "description": "Ancient trap for wolf hunting",
+        "historic": "ruins",
+        "man_made": "hunting_site",
+        "name": "Lobera de Perex",
+        "ruins": "hunting",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.2940803,
+          42.9545148
+        ]
+      },
+      "id": "node/1743121258"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1743754019",
+        "description": "Ancient trap for wolf hunting",
+        "historic": "ruins",
+        "name": "Lobera Fontanillas",
+        "ruins": "hunting",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.0153822,
+          42.9186576
+        ]
+      },
+      "id": "node/1743754019"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1743754025",
+        "description": "Ancient trap for wolf hunting",
+        "historic": "ruins",
+        "name": "Lobera de Monte Santiago",
+        "name:en": "Wolf-trap (hole)",
+        "name:eu": "Donejakue mendiko otso-harrapagailua",
+        "name:fr": "Piège à loup (trou)",
+        "ruins": "hunting",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9855179,
+          42.936713
+        ]
+      },
+      "id": "node/1743754025"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1743754028",
+        "description": "Ancient trap for wolf hunting",
+        "historic": "ruins",
+        "name": "Lobera Vieja",
+        "ruins": "hunting",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.0146223,
+          42.9224452
+        ]
+      },
+      "id": "node/1743754028"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1744536993",
+        "description": "Ancient trap for wolf hunting",
+        "historic": "ruins",
+        "name": "Lobera Santiago (Foso Viejo)",
+        "ruins": "hunting",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9838734,
+          42.940537
+        ]
+      },
+      "id": "node/1744536993"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3226466056",
+        "description": "Ancient trap for wolf hunting",
+        "historic": "ruins",
+        "name": "Lobera de San Miguel",
+        "ruins": "hunting",
+        "tourism": "attraction",
+        "website": "http://tierrasdeburgos.blogspot.com.es/2017/05/la-lobera-de-san-miguel.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1724719,
+          43.0171837
+        ]
+      },
+      "id": "node/3226466056"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3430099103",
+        "historic": "ruins",
+        "name": "Lobera de Castrobarto",
+        "ruins": "hunting",
+        "tourism": "attraction",
+        "website": "http://www.valledelosa.es/turismo-y-ocio/acebos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.3729337,
+          43.0794536
+        ]
+      },
+      "id": "node/3430099103"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3430114271",
+        "description": "Ancient trap for wolf hunting",
+        "historic": "ruins",
+        "name": "Lobera de Villabasil",
+        "ruins": "hunting",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.3082337,
+          43.0469285
+        ]
+      },
+      "id": "node/3430114271"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3430247748",
+        "historic": "ruins",
+        "name": "Lobera del Toyo",
+        "ruins": "hunting",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.2545765,
+          42.941628
+        ]
+      },
+      "id": "node/3430247748"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4858600297",
+        "historic": "ruins",
+        "name": "Lobera de Gurdieta",
+        "ruins": "hunting",
+        "tourism": "attraction",
+        "website": "http://tierrasdeburgos.blogspot.com.es/2017/05/lobera-de-gurdieta.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.2007829,
+          43.0443823
+        ]
+      },
+      "id": "node/4858600297"
+    }
+  ]
+}

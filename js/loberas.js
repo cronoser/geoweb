@@ -5,14 +5,14 @@ var config = {
     markerColor: '#138d75',
     theme: 'dark',
     use3dTerrain: true,
-    title: 'Loberas',
+    title: 'LOBERAS',
     subtitle: 'Un paseo por las loberas de la comarca de Las Merindades (Burgos)',
-    byline: 'M2B ',
-    footer: 'Source: Wikipedia',
+    byline: 'Por Oscar Zorrilla Alonso',
+    footer: 'Asignatura: Mapas y OpenData | UPC School<ul><li>Source:</li><li><a href="condicionesdeuso.html">Condiciones de uso</a></li></ul>',
     chapters: [
         {
             id: 'lobera1',
-            alignment: 'right',
+            alignment: 'left',
             hidden: false,
             title: 'Lobera Monte Santiago',
             image: 'https://www.lasmerindades.com/sites/merindades/files/styles/slide_cabecera/public/lobera.jpg',
@@ -82,7 +82,7 @@ var config = {
             hidden: false,
             title: 'Lobera del Toyo',
             image: 'https://3.bp.blogspot.com/-pevNU_W2veA/WUldOFuYtyI/AAAAAAAAYeo/SSchWvg3FgIl9QBgHaQraNv4E_viKf6UwCKgBGAs/s1600/Imagen1.jpg',
-            description: 'Situada en el valle del río Jerea como la anterior, apenas visible desde fotos de satélite por la vegetación. Su estado de conservación no es bueno.',
+            description: 'Situada en el valle del río Jerea como la anterior, apenas visible desde fotos de satélite por la vegetación. Su estado de conservación es regular pese a no haber sido restaurada.',
             location: {
                 center: [-3.2545765, 42.941628],
                 zoom: 18,
@@ -100,7 +100,7 @@ var config = {
             hidden: false,
             title: 'Lobera del alto del Caballo',
             image: 'http://1.bp.blogspot.com/-5uugB230T60/VCQCfKQUqbI/AAAAAAAARZc/g0cz6FJf_WM/s1600/14.JPG',
-            description: 'completar texto.',
+            description: 'Recuperada parcialmente en 2010 gracias a la colaboración de la Fundación Naturaleza y Hombre con administraciones de la zona.',
             location: {
                 center: [-3.5295970127630483, 43.117573962793244],
                 zoom: 18,
@@ -118,7 +118,7 @@ var config = {
             hidden: false,
             title: 'Lobera de Castrobarto',
             image: 'http://4.bp.blogspot.com/-nE-1UBQYpcI/Vg5jeFx-cNI/AAAAAAAAUNw/jF97Ln_bH2s/s1600/16.JPG',
-            description: 'Lorem ipsum',
+            description: 'Se encuentra en una umbría y preciosa vaguada; emplazamiento perfectamente escogido para acorralar a las presas y que aprovecha su situación cercana a los cortados de los montes de la Peña.',
             location: {
                 center: [-3.3729337, 43.0794536],
                 zoom: 18,
@@ -132,7 +132,7 @@ var config = {
             onChapterExit: []
         },{
             id: 'lobera7',
-            alignment: 'right',
+            alignment: 'left',
             hidden: false,
             title: 'Callejo de los Lobos',
             image: 'http://3.bp.blogspot.com/-mwp60Hkd3lQ/Uyq5A-9mPwI/AAAAAAAAPzo/_hRT8ku51kI/s1600/00D.jpg',
@@ -145,6 +145,23 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },{
+            id: 'lobera8',
+            alignment: 'right',
+            hidden: false,
+            title: 'GRACIAS POR LLEGAR HASTA AQUÍ',
+            description: 'Este mapa ha sido diseñado por Oscar Zorrilla Alonso.',
+            location: {
+                center: [-3.489927271280635,42.962935470653605],
+                zoom: 10,
+                pitch: 30,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
