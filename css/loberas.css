@@ -34,12 +34,6 @@
             background-color: #138d75;
             margin: 0;
         }
-        #menu {
-            color: #fafafa;
-            background-color: #138d75;
-            margin: 0;
-            z-index: 5;
-        }
         #nav {
             display: inline-block;
         }
