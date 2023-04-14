@@ -9,7 +9,7 @@ var config = {
     title: 'LOBERAS',
     subtitle: 'Un paseo por las loberas de la comarca de Las Merindades (Burgos)',
     byline: 'Por Óscar Zorrilla Alonso',
-    footer: 'Asignatura: Mapas y OpenData | UPC School<ul><li>Fuentes:</li><li><a href="https://lasmerindades.com/">Las Merindades</a></li><li><a href="https://turismoenburgos.blogspot.com/">Blog: Turismo en Burgos</a></li><li><a href="https://tierrasdeburgos.blogspot.com/">Blog: Tierras de Burgos</a></li></ul> ', 
+    footer: 'Fuentes de las imágenes y vídeo: <a href="https://lasmerindades.com/" target="_blank">Las Merindades</a> | <a href="https://turismoenburgos.blogspot.com/" target="_blank">Blog: Turismo en Burgos</a> | <a href="https://tierrasdeburgos.blogspot.com/" target="_blank">Blog: Tierras de Burgos</a> | <a href="https://www.burgossinirmaslejos.com/" target="_blank">Burgos, sin ir más lejos</a>', 
     chapters: [
         {
             id: 'lobera1',
@@ -17,8 +17,7 @@ var config = {
             hidden: false,
             title: 'Lobera Monte Santiago',
             image: 'https://www.lasmerindades.com/sites/merindades/files/styles/slide_cabecera/public/lobera.jpg',
-            description: 'Dentro del Monumento Natural Monte Santiago y junto a la cáscada mas alta de España. Se trata de una lobera excepcional, ya que uno de los muros da lugar a dos loberas, una en cada extremo. Se trata de la mas grande de una total de cuatro loberas en el mismo enclave.',
-            video: src='https://www.youtube.com/watch?v=nDleb4WGeqQ',
+            description: 'Dentro del Monumento Natural Monte Santiago y junto a la cáscada mas alta de España encontramos la lobera de Monte Santiago. Se trata de una contrucción excepcional, ya que uno de los muros da lugar a dos loberas, una en cada extremo. Se trata de la más grande de un total de cuatro loberas en el mismo enclave.',
             location: {
                 center: [-2.9855180842918685, 42.936710456036366],
                 zoom: 18,
@@ -83,7 +82,7 @@ var config = {
             hidden: false,
             title: 'Lobera del Toyo',
             image: 'https://3.bp.blogspot.com/-pevNU_W2veA/WUldOFuYtyI/AAAAAAAAYeo/SSchWvg3FgIl9QBgHaQraNv4E_viKf6UwCKgBGAs/s1600/Imagen1.jpg',
-            description: 'Situada en el valle del río Jerea como la anterior, apenas visible desde fotos de satélite por la vegetación. Su estado de conservación es regular pese a no haber sido restaurada.',
+            description: 'Situada en el valle del río Jerea como la anterior, apenas visible desde fotos de satélite por la vegetación. Su estado de conservación es regular pese a no haber sido restaurada. <a href="http://tierrasdeburgos.blogspot.com/2017/06/la-lobera-del-toyo.html" target="_blank"> Mas detalles</a>',
             location: {
                 center: [-3.2545765, 42.941628],
                 zoom: 18,
@@ -154,7 +153,7 @@ var config = {
             alignment: 'center',
             hidden: false,
             title: 'GRACIAS POR LLEGAR HASTA AQUÍ',
-            description: 'Este mapa ha sido diseñado por Oscar Zorrilla Alonso.',
+            description: 'Este mapa ha sido diseñado por Oscar Zorrilla Alonso, para la asignatura: Mapas y OpenData | UPC School.',
             location: {
                 center: [-3.489927271280635,42.962935470653605],
                 zoom: 10,
@@ -163,7 +162,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'addLimite();',
+            callback: '',
             onChapterEnter: [],
             onChapterExit: []
         }
