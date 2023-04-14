@@ -8,7 +8,7 @@ var config = {
     use3dTerrain: true,
     title: 'LOBERAS',
     subtitle: 'Un paseo por las loberas de la comarca de Las Merindades (Burgos)',
-    byline: 'Por Oscar Zorrilla Alonso',
+    byline: 'Por Óscar Zorrilla Alonso',
     footer: 'Asignatura: Mapas y OpenData | UPC School<ul><li>Fuentes:</li><li><a href="https://lasmerindades.com/">Las Merindades</a></li><li><a href="https://turismoenburgos.blogspot.com/">Blog: Turismo en Burgos</a></li><li><a href="https://tierrasdeburgos.blogspot.com/">Blog: Tierras de Burgos</a></li></ul> ', 
     chapters: [
         {
