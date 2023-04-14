@@ -1,5 +1,6 @@
 var config = {
     style: 'mapbox://styles/mapbox/satellite-v9',
+    //style: 'mapbox://styles/cronoser1/clgffsj99001s01qt2ozjek2s',
     accessToken: 'pk.eyJ1IjoiY3Jvbm9zZXIxIiwiYSI6ImNsY3oxbmM4dTJpdnczcm1zN3Exc3RyMDcifQ.UYUlgPFANSfaK4YmcUDF1g',
     showMarkers: true,
     markerColor: '#138d75',
@@ -42,7 +43,7 @@ var config = {
             ]
         },{
             id: 'lobera2',
-            alignment: 'left',
+            alignment: 'right',
             hidden: false,
             title: 'Lobera de San Miguel',
             image: 'https://3.bp.blogspot.com/-tcD4FfL14cg/WRGIlavOM1I/AAAAAAAAYSw/hL77ACxsDIYtpEaV_CqdDpywFypOxPAzwCKgB/s1600/lobera%2Bsan%2Bmiguel%2B3.jpg',
@@ -60,7 +61,7 @@ var config = {
             onChapterExit: []
         },{
             id: 'lobera3',
-            alignment: 'left',
+            alignment: 'center',
             hidden: false,
             title: 'Lobera de la Barrerilla',
             image: 'https://3.bp.blogspot.com/-9VwQP5A_8Zs/Vk-kMftrfQI/AAAAAAAABc8/U71U3IDuggc/s640/lobera%2Bde%2Bla%2Bbarrerilla%2B3.JPG',
@@ -150,7 +151,7 @@ var config = {
             onChapterExit: []
         },{
             id: 'lobera8',
-            alignment: 'right',
+            alignment: 'center',
             hidden: false,
             title: 'GRACIAS POR LLEGAR HASTA AQUÍ',
             description: 'Este mapa ha sido diseñado por Oscar Zorrilla Alonso.',
@@ -162,7 +163,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'addLimite();',
             onChapterEnter: [],
             onChapterExit: []
         }
