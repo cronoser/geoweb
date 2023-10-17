@@ -29,7 +29,7 @@
             map.addControl(new mapboxgl.NavigationControl());
 
             map.on('load', function () {
-             add3D();
+             add3D('icgc-dem'); //mapbox-dem  o null
              addRutas();
 
             }); //fin onload         
