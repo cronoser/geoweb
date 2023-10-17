@@ -1,0 +1,354 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2023-10-11T16:53:12Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/252628793",
+        "name": "Cascada del Molino",
+        "source": "ITACyL",
+        "tourism": "attraction",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7471324,
+          42.9691131
+        ]
+      },
+      "id": "node/252628793"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/252628794",
+        "name": "Cascada de las Pisas",
+        "source": "ITACyL",
+        "tourism": "attraction",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7566756,
+          42.9733073
+        ]
+      },
+      "id": "node/252628794"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/764707362",
+        "height": "13",
+        "image": "File:Penaladros.jpg",
+        "name": "Cascada de Peñaladros",
+        "source": "ITACyL",
+        "tourism": "attraction",
+        "waterway": "waterfall",
+        "wikidata": "Q63313389",
+        "wikipedia": "eu:Peñaladros-eko ur-jauzia"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1490459,
+          43.0591789
+        ]
+      },
+      "id": "node/764707362"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/764953247",
+        "alt_name": "Cascada del Peñón",
+        "height": "12",
+        "name": "Cascada de Pedrosa de Tobalina",
+        "source": "ITACyL",
+        "tourism": "attraction",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.3339358,
+          42.8482456
+        ]
+      },
+      "id": "node/764953247"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1674083745",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.305202,
+          42.7497751
+        ]
+      },
+      "id": "node/1674083745"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1703019788",
+        "name": "Nacimiento del Cadagua",
+        "natural": "spring",
+        "tourism": "attraction",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.3572317,
+          43.073853
+        ]
+      },
+      "id": "node/1703019788"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1703649900",
+        "name": "Cascada Pozo Guarguero",
+        "name:en": "Waterfall Pozo Guarguero",
+        "name:es": "Cascada Pozo Guarguero",
+        "tourism": "attraction",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.6746102,
+          43.1159218
+        ]
+      },
+      "id": "node/1703649900"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1722977256",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.307727,
+          42.7490612
+        ]
+      },
+      "id": "node/1722977256"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1725993186",
+        "name": "Cascada Tobera",
+        "tourism": "attraction",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.3056247,
+          42.7492779
+        ]
+      },
+      "id": "node/1725993186"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1787960621",
+        "name": "Cascada de La Mea",
+        "source": "ITACyL",
+        "tourism": "attraction",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.6771415,
+          42.9828146
+        ]
+      },
+      "id": "node/1787960621"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1787968904",
+        "height": "200",
+        "intermittent": "yes",
+        "name": "Cascada de San Miguel",
+        "source": "ITACyL",
+        "tourism": "attraction",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1772208,
+          43.0212751
+        ]
+      },
+      "id": "node/1787968904"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1828116220",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.4006387,
+          43.1158187
+        ]
+      },
+      "id": "node/1828116220"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1828162357",
+        "name": "Cascada de Aguasal",
+        "tourism": "attraction",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.4000661,
+          43.1153386
+        ]
+      },
+      "id": "node/1828162357"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3269389626",
+        "height": "35",
+        "name": "Cascada de Tartalés",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.4898129,
+          42.8221848
+        ]
+      },
+      "id": "node/3269389626"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3520871935",
+        "height": "30",
+        "name": "Cascada Salceda",
+        "waterway": "waterfall",
+        "website": "http://tierrasdeburgos.blogspot.com.es/2015/04/escultura-del-agua-cascada-salceda.html#more"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.6653579,
+          43.0816268
+        ]
+      },
+      "id": "node/3520871935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4401866869",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.80515,
+          43.0261055
+        ]
+      },
+      "id": "node/4401866869"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6339985486",
+        "name": "Cascada de Irus",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.3795325,
+          43.0976401
+        ]
+      },
+      "id": "node/6339985486"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6524367785",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.3256271,
+          43.1326816
+        ]
+      },
+      "id": "node/6524367785"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8505073518",
+        "name": "Torrente Nora",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.6563228,
+          43.0773968
+        ]
+      },
+      "id": "node/8505073518"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9443131272",
+        "intermittent": "yes",
+        "name": "Cascada de la Osera",
+        "waterway": "waterfall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7529464,
+          43.0611198
+        ]
+      },
+      "id": "node/9443131272"
+    }
+  ]
+}

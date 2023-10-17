@@ -9,7 +9,7 @@
     <link href='css/estilobase.css' rel='stylesheet' />
 
     <script src='js/3d.js'></script>
-    <script src='js/rutas.js'></script>
+    <script src='js/poi.js'></script>
     <script>
         //Añadir vuestor token!!
         var map;
@@ -23,9 +23,7 @@
                 style: 'mapbox://styles/cronoser1/clnlzkzrf005t01qq33qu9zht',
                 center: [-3.52652, 42.93349],
                 zoom: 10,
-                attributionControl: false,
-                pitch: 30,
-                projection: 'globe',
+                attributionControl: true,
                 hash: true
             });
 
@@ -36,7 +34,7 @@
 
             map.on('load', function() {
                 add3D('mapbox-dem'); //mapbox-dem  o none
-                addRutas();
+                addPOI();
 
             }); //fin onload         
 
@@ -48,9 +46,9 @@
 
     <div class="panelTopIzquierda">
        <select onChange="zoomToRutas(this.value)">
-            <option selected value="14/41.60044/1.77878">Ruta 1</option>
-            <option value="12.96/41.76589/2.30274">Ruta 2</option>
-            <option value="13.04/42.31892/3.26054">Ruta 3</option>
+            <option value="17.51/42.97364//-3.756868/">Cascadas</option>
+            <option selected value="19/42.9275012/-3.4881332">Castillos</option>
+            <option value="20.01/42.7810534/-3.3184737">Necrópolis</option>
         </select>
         <hr>
 
