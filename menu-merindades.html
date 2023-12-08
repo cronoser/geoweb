@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Menu cambio capa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+        <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        .menu {
+            background: #fff;
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+            right: 10px;
+            border-radius: 3px;
+            padding: 10px;
+            font-family: 'Arial', sans-serif;
+        }
+        .menu a {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #333;
+            cursor: pointer;
+        }
+        .menu a:hover {
+            background: #f8f8f8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+    <div class="menu">
+        <a onclick="switchLayer('streets')">Streets</a>
+        <a onclick="switchLayer('satellite')">Satellite</a>
+        <a onclick="switchLayer('dark')">Dark</a>
+    </div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiY3Jvbm9zZXIxIiwiYSI6ImNsY3oxbmM4dTJpdnczcm1zN3Exc3RyMDcifQ.UYUlgPFANSfaK4YmcUDF1g';
+
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-74.5, 40],
+            zoom: 9
+        });
+
+        function switchLayer(layer) {
+            var layerId = map.getStyle().layers[0].id;
+            if (layerId !== layer) {
+                map.setStyle('mapbox://styles/mapbox/' + layer + '-v11');
+            }
+        }
+    </script>
+
+</body>
+</html>
+
