@@ -1,0 +1,39 @@
+<html>
+    <head>
+    <meta charset='utf-8' />
+    <title>Mapa Merindades 3D</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='css/estilobase.css' rel='stylesheet' />
+
+    <script src='js/3d.js'></script>
+    <script>
+        //Añadir vuestor token!!
+        var map;
+        function init() {
+            mapboxgl.accessToken =
+                'pk.eyJ1IjoiY3Jvbm9zZXIiLCJhIjoiY2xwd2s5cWNiMGo4bTJzczg0OHZkcXU2NyJ9.aUpxfCiDYd7SWMLfZytzXg';
+             map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/cronoser/clqa5177w007001o339rt6lzs',
+                center: [2.16859, 41.3954],
+                zoom: 12,
+                attributionControl: false,
+                pitch: 45,
+                hash: true
+            });
+
+            map.addControl(new mapboxgl.AttributionControl({ compact: true }));
+            map.addControl(new mapboxgl.NavigationControl());
+
+        } // final init
+    </script>
+    </head>
+
+    <body onload="init()">
+
+        <div id="map"></div>
+    </body>
+
+    </html>
