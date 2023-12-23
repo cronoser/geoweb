@@ -7,11 +7,12 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
     <link href='css/estilobase.css' rel='stylesheet' />
 
-    <script src='js/3d.js'></script>
+    <script src='js/m3d.js'></script>
     <script>
-        //Añadir vuestor token!!
+        
         var map;
         function init() {
+            //Añadir nuestro token!!
             mapboxgl.accessToken =
                 'pk.eyJ1IjoiY3Jvbm9zZXIiLCJhIjoiY2xwd2s5cWNiMGo4bTJzczg0OHZkcXU2NyJ9.aUpxfCiDYd7SWMLfZytzXg';
              map = new mapboxgl.Map({
@@ -26,6 +27,10 @@
 
             map.addControl(new mapboxgl.AttributionControl({ compact: true }));
             map.addControl(new mapboxgl.NavigationControl());
+
+            map.on('load', function () {
+              add3D();
+            }); //fin onload
 
         } // final init
     </script>
