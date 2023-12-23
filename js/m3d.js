@@ -29,7 +29,7 @@ function add3D() {
 
 
     //edificios de los estilos Mapbox
-
+/*
 
     map.addLayer({
             'id': '3d-buildings',
@@ -44,7 +44,7 @@ function add3D() {
                 'fill-extrusion-opacity': 0.9
             }
         });
-
+*/
 
 
 
