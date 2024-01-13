@@ -19,7 +19,6 @@
                 container: 'map',
                 style: 'mapbox://styles/cronoser/clqa5177w007001o339rt6lzs',
                 center: [-3.52652, 42.93349], //Merindades
-                //center: [2.16859, 41.3954], //Barcelona
                 zoom: 10,
                 attributionControl: true, //para que se vea la licencia de OSM y otros
                 pitch: 45,
@@ -38,6 +37,26 @@
     </head>
 
     <body onload="init()">
+        <div class="panelTopIzquierda">
+            <div>Categoría</div>
+            <hr>
+            <select onChange="zoomToRutas(this.value)">
+                 <option value="17.51/42.97364/-3.756868">Cascadas</option>
+                 <option selected value="19/42.9275012/-3.4881332">Castillos</option>
+                 <option value="20.01/42.7810534/-3.3184737">Necrópolis</option>
+             </select>
+         </div>
+
+         <div class="panelTopDerecha">  
+            <div>Capa</div>
+            <hr>
+            <div>
+                 <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="mapbox-dem">Mapbox <br>
+                 <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="icgc-dem">ICGC <br>
+                 <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="IGN-BaseOrto">IGN Satélite <br>
+                 <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="none">2D
+             </div>
+         </div>
 
         <div id="map"></div>
     </body>

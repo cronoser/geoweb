@@ -7,8 +7,18 @@ function add3D() {
         'maxzoom': 14
     });
 
-    /*
-    map.addSource('IGN Base Orto', {
+    //Mapbox Satellite
+    map.addSource('icgc-dem', {
+        'type': 'raster-dem',
+        "tiles": [
+        "https://tilemaps.icgc.cat/tileserver/tileserver.php/terreny_icgc_2m_rgb/{z}/{x}/{y}.png"
+      ],
+        'tileSize': 512,
+        'maxzoom': 14
+    });
+
+    //IGN Base Orto
+    map.addSource('IGN-BaseOrto', {
         'type': 'raster-dem',
         "tiles": [
         "https://tms-ign-base.idee.es/1.0.0/IGNBaseOrto/{z}/{x}/{-y}.png"
@@ -16,7 +26,7 @@ function add3D() {
         'tileSize': 512,
         'maxzoom': 16
     });
-    */
+    
 
 
    map.setFog({});
@@ -46,9 +56,17 @@ function add3D() {
         });
 */
 
+} //fin funcion
 
+function changeTerrain(terreno){
 
-
-
+    if(terreno){
+        map.setTerrain({
+            'source': terreno,
+            'exaggeration': 1.5
+        });
+    }else{
+        map.setTerrain(null);
+    }
 
 } //fin funcion
