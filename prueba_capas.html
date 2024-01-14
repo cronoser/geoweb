@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Change a map's style</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<style>
+    #menu {
+        position: absolute;
+        background: #efefef;
+        padding: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+</style>
+
+<div id="map"></div>
+
+<div id="menu">
+    <input id="satellite-streets-v12" type="radio" name="rtoggle" value="satellite" checked="checked">
+    <!-- See a list of Mapbox-hosted public styles at -->
+    <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
+    <label for="mapbox/satellite-streets-v12">satellite streets</label>
+    <input id="mapbox/light-v11" type="radio" name="rtoggle" value="light">
+    <label for="mapbox/light-v11">light</label>
+    <input id="cronoser/clqa5177w007001o339rt6lzs" type="radio" name="rtoggle" value="dark">
+    <label for="cronoser/clqa5177w007001o339rt6lzs">dark</label>
+    <input id="mapbox/streets-v12" type="radio" name="rtoggle" value="streets">
+    <label for="mapbox/streets-v12">streets</label>
+    <input id="mapbox/outdoors-v12" type="radio" name="rtoggle" value="outdoors">
+    <label for="mapbox/outdoors-v12">outdoors</label>
+</div>
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiY3Jvbm9zZXIiLCJhIjoiY2lleWc1NjQ1MDBiNHRrbTFwb2YwMjlqaSJ9.kx_0Irc5cryO5Nnn-Lt48A';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        //style: 'mapbox://styles/mapbox/satellite-streets-v12', // style URL
+        style: 'mapbox://styles/cronoser/clqa5177w007001o339rt6lzs', // estilo mío
+        center: [-3.52652, 42.93349], //Merindades
+        zoom: 10,
+        attributionControl: true, //para que se vea la licencia de OSM y otros
+        pitch: 45,
+        hash: true
+    });
+
+    const layerList = document.getElementById('menu');
+    const inputs = layerList.getElementsByTagName('input');
+
+    for (const input of inputs) {
+        input.onclick = (layer) => {
+            const layerId = layer.target.id;
+            map.setStyle('mapbox://styles/' + layerId);
+        };
+    }
+</script>
+
+</body>
+</html>

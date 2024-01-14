@@ -32,6 +32,18 @@
               add3D();
             }); //fin onload
 
+        //
+        const layerList = document.getElementById('menu');
+        const inputs = layerList.getElementsByTagName('input');
+        
+        for (const input of inputs) {
+            input.onclick = (layer) => {
+              const layerId = layer.target.id;
+            map.setStyle('mapbox://styles/mapbox/' + layerId);
+        };
+}
+
+
         } // final init
     </script>
     </head>
@@ -51,9 +63,11 @@
             <div>Capa</div>
             <hr>
             <div>
-                 <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="mapbox-dem">Mapbox <br>
+                 <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="mapbox-dem">Mapbox
+                 <label for="outdoors-v12">outdoors</label><br>
                  <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="icgc-dem">ICGC <br>
-                 <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="IGN-BaseOrto">IGN Satélite <br>
+                 <input id="satellite-streets-v12" type="radio" onClick="changeTerrain(this.value)" name="dem" value="IGN-BaseOrto"> 
+                 <label for="satellite-streets-v12">satellite streets</label><br>
                  <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="none">2D
              </div>
          </div>
