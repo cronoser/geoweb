@@ -21,7 +21,7 @@
                 center: [-3.52652, 42.93349], //Merindades
                 zoom: 10,
                 attributionControl: true, //para que se vea la licencia de OSM y otros
-                pitch: 45,
+                pitch: 0,
                 hash: true
             });
 
@@ -51,8 +51,11 @@
     <body onload="init()">
         <div class="panelTopIzquierda">
             <div>Categoría</div>
-            <input onChange="activarCascadas(this.checked)" type="checkbox">Capa Cascadas
             <hr>
+                <input onChange="activarCascadas(this.checked)" type="checkbox">Cascadas<br>
+                <input onChange="activarEremitorios(this.checked)" type="checkbox">Eremitorios<br>
+                <input onChange="activarNecropolis(this.checked)" type="checkbox">Necrópolis<br>
+                <input onChange="activarParquesNaturales(this.checked)" type="checkbox">Parques Naturales<br>
                  <select onChange="zoomToRutas(this.value)">
                  <option value="17.51/42.97364/-3.756868">Cascadas</option>
                  <option selected value="19/42.9275012/-3.4881332">Castillos</option>

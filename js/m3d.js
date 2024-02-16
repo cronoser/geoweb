@@ -77,4 +77,28 @@ function activarCascadas(estado){
     } else { 
         map.setLayoutProperty('cascadas-merindades','visibility','none');
     }
-}
+} //fin funcion
+
+function activarEremitorios(estado){
+    if (estado){
+        map.setLayoutProperty('eremitorios-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('eremitorios-merindades','visibility','none');
+    }
+} //fin funcion
+
+function activarNecropolis(estado){
+    if (estado){
+        map.setLayoutProperty('necropolis-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('necropolis-merindades','visibility','none');
+    }
+} //fin funcion
+
+function activarParquesNaturales(estado){
+    if (estado){
+        map.setLayoutProperty('pn-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('pn-merindades','visibility','none');
+    }
+} //fin funcion
