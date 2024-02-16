@@ -70,3 +70,11 @@ function changeTerrain(terreno){
     }
 
 } //fin funcion
+
+function activarCascadas(estado){
+    if (estado){
+        map.setLayoutProperty('cascadas-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('cascadas-merindades','visibility','none');
+    }
+}

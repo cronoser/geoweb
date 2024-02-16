@@ -51,8 +51,9 @@
     <body onload="init()">
         <div class="panelTopIzquierda">
             <div>Categoría</div>
+            <input onChange="activarCascadas(this.checked)" type="checkbox">Capa Cascadas
             <hr>
-            <select onChange="zoomToRutas(this.value)">
+                 <select onChange="zoomToRutas(this.value)">
                  <option value="17.51/42.97364/-3.756868">Cascadas</option>
                  <option selected value="19/42.9275012/-3.4881332">Castillos</option>
                  <option value="20.01/42.7810534/-3.3184737">Necrópolis</option>
