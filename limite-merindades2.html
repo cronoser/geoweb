@@ -18,7 +18,7 @@
              map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/cronoser/clqa5177w007001o339rt6lzs',
-                center: [-3.52652, 42.93349], //Merindades
+                center: [-3.476992410758, 42.9537576763814855], //Ubicación del centroide Merindades
                 zoom: 10,
                 attributionControl: true, //para que se vea la licencia de OSM y otros
                 pitch: 0,
@@ -27,6 +27,7 @@
 
           //map.addControl(new mapboxgl.AttributionControl({ compact: true })); //duplica la atribución, no debe estar
             map.addControl(new mapboxgl.NavigationControl());
+            map.addControl(new mapboxgl.ScaleControl()); //visualiza una escala en el mapa
 
             map.on('load', function () {
               add3D();
@@ -40,8 +41,8 @@
             input.onclick = (layer) => {
               const layerId = layer.target.id;
             map.setStyle('mapbox://styles/mapbox/' + layerId);
-        };
-}
+            };
+        }
 
 
         } // final init
@@ -52,7 +53,7 @@
         <div class="panelTopIzquierda">
             <div>Categoría</div>
             <hr>
-                <input checked!="true" onChange="activarCascadas(this.checked)" type="checkbox">Cascadas<br>
+                <input checked="true" onChange="activarCascadas(this.checked)" type="checkbox">Cascadas<br>
                 <input onChange="activarEremitorios(this.checked)" type="checkbox">Eremitorios<br>
                 <input onChange="activarNecropolis(this.checked)" type="checkbox">Necrópolis<br>
                 <input onChange="activarParquesNaturales(this.checked)" type="checkbox">Parques Naturales<br>
