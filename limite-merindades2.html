@@ -52,7 +52,7 @@
         <div class="panelTopIzquierda">
             <div>Categoría</div>
             <hr>
-                <input onChange="activarCascadas(this.checked)" type="checkbox">Cascadas<br>
+                <input checked!="true" onChange="activarCascadas(this.checked)" type="checkbox">Cascadas<br>
                 <input onChange="activarEremitorios(this.checked)" type="checkbox">Eremitorios<br>
                 <input onChange="activarNecropolis(this.checked)" type="checkbox">Necrópolis<br>
                 <input onChange="activarParquesNaturales(this.checked)" type="checkbox">Parques Naturales<br>
@@ -67,13 +67,19 @@
             <div>Capa</div>
             <hr>
             <div>
-                 <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="mapbox-dem">Mapbox
-                 <label for="outdoors-v12">outdoors</label><br>
-                 <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="icgc-dem">ICGC <br>
+                 <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="mapbox-dem">
+                 <label for="outdoors-v12">Outdoors</label><br>
+                 <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="icgc-dem">
+                 <label for="outdoors-v12">ICGC</label><br>
                  <input id="satellite-streets-v12" type="radio" onClick="changeTerrain(this.value)" name="dem" value="IGN-BaseOrto"> 
-                 <label for="satellite-streets-v12">satellite streets</label><br>
-                 <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="none">2D
+                 <label for="satellite-streets-v12">Satélite</label><br>
+                
              </div>
+             <hr>
+            <div>
+                <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="none">
+                <label for="satellite-streets-v12">3D</label><br>
+            </div>    
          </div>
 
         <div id="map"></div>
