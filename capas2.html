@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Capas 2</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+    <link href='css/estilobase.css' rel='stylesheet' />
+    
+</head>
+
+<script>
+	
+	var map;
+    function init(){
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY3Jvbm9zZXIiLCJhIjoiY2xwd2s5cWNiMGo4bTJzczg0OHZkcXU2NyJ9.aUpxfCiDYd7SWMLfZytzXg';
+    map = new mapboxgl.Map({
+        container: 'map', // container ID
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/mapbox/satellite-v9', // style URL
+        projection: 'globe', // Display the map as a globe, since satellite-v9 defaults to Mercator
+        center: [-3.476992410758, 42.9537576763814855], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+    map.on('style.load', () => {
+        map.setFog({}); // Set the default atmosphere style, since satellite-v9 doesn't include atmosphere by default.
+    });
+    }//final init
+
+    function changeTerrain(terreno){
+
+if(terreno){
+    map.setTerrain({
+        'source': terreno,
+        'exaggeration': 1.5
+    });
+}else{
+    map.setTerrain(null);
+}
+
+} //fin funcion
+
+
+</script>
+<body onload="init()">
+    <div id="map"></div>
+    <div class="panelTopIzquierda">
+        <div>Categoría</div>
+        <hr>
+        <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="mapbox-dem">
+       
+    </div>
+</body>
+</html>

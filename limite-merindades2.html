@@ -34,7 +34,7 @@
             }); //fin onload
 
         //
-        const layerList = document.getElementById('menu');
+        /*const layerList = document.getElementById('menu');
         const inputs = layerList.getElementsByTagName('input');
         
         for (const input of inputs) {
@@ -42,7 +42,7 @@
               const layerId = layer.target.id;
             map.setStyle('mapbox://styles/mapbox/' + layerId);
             };
-        }
+        }*/
 
 
         } // final init
@@ -53,10 +53,11 @@
         <div class="panelTopIzquierda">
             <div>Categoría</div>
             <hr>
-                <input checked="true" onChange="activarCascadas(this.checked)" type="checkbox">Cascadas<br>
-                <input onChange="activarEremitorios(this.checked)" type="checkbox">Eremitorios<br>
-                <input onChange="activarNecropolis(this.checked)" type="checkbox">Necrópolis<br>
-                <input onChange="activarParquesNaturales(this.checked)" type="checkbox">Parques Naturales<br>
+                <input type="checkbox" checked="true" onChange="activarCascadas(this.checked)" >Cascadas<br>
+                <input type="checkbox" onChange="activarEremitorios(this.checked)">Eremitorios<br>
+                <input type="checkbox" onChange="activarNecropolis(this.checked)">Necrópolis<br>
+                <input type="checkbox" onChange="activarParquesNaturales(this.checked)">Parques Naturales<br>
+                
                  <select onChange="zoomToRutas(this.value)">
                  <option value="17.51/42.97364/-3.756868">Cascadas</option>
                  <option selected value="19/42.9275012/-3.4881332">Castillos</option>
@@ -68,12 +69,10 @@
             <div>Capa</div>
             <hr>
             <div>
-                 <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="mapbox-dem">
-                 <label for="outdoors-v12">Outdoors</label><br>
-                 <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="icgc-dem">
-                 <label for="outdoors-v12">ICGC</label><br>
-                 <input id="satellite-streets-v12" type="radio" onClick="changeTerrain(this.value)" name="dem" value="IGN-BaseOrto"> 
-                 <label for="satellite-streets-v12">Satélite</label><br>
+                 <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="Outdoor">Outdoor<br>
+                 <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="Outdoor">IGCC<br>
+                 <input type="checkbox" onClick="cambiarCapa(this.checked)">Satélite<br>
+                 
                 
              </div>
              <hr>

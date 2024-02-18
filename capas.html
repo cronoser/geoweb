@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Capas</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; height:550px; }
+    </style>
+</head>
+<body>
+    <div id='map'></div>
+    <button id="satellite-button">Capa de Satélite</button>
+    <button id="custom-layer-button">Capa Personalizada</button>
+</body>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY3Jvbm9zZXIiLCJhIjoiY2xwd2s5cWNiMGo4bTJzczg0OHZkcXU2NyJ9.aUpxfCiDYd7SWMLfZytzXg'; // Reemplaza con tu token
+    var map
+    function init(){
+        map=new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/cronoser/clqa5177w007001o339rt6lzs', // Reemplaza con la URL de tu estilo
+        center: [-3.476992410758, 42.9537576763814855], // Coordenadas del centro del mapa
+        zoom: 9 // Nivel de zoom
+        projection: 'globe', // Display the map as a globe, since satellite-v9 defaults to Mercator
+    });
+
+    map.on('style.load', function() => {
+        map.setFog({}); // Set the default atmosphere style, since satellite-v9 doesn't include atmosphere by default.
+    });
+
+    // Obtén una referencia a los botones
+    var satelliteButton = document.getElementById('satellite-button');
+    var customLayerButton = document.getElementById('custom-layer-button');
+
+    // Escucha el clic en el botón de capa de satélite
+    satelliteButton.addEventListener('click', function() {
+        map.setStyle('mapbox://styles/mapbox/satellite-v9');
+    });
+
+    // Escucha el clic en el botón de capa personalizada
+    customLayerButton.addEventListener('click', function() {
+        map.setStyle('mapbox://styles/cronoser/clqa5177w007001o339rt6lzs'); // Reemplaza con la URL de tu estilo personalizado
+    }); 
+</script>
+</html>
