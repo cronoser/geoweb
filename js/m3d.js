@@ -115,16 +115,3 @@ function cambiarCapa(estado){
 } //fin funcion
 
 
-// Obtén una referencia a los botones
-var satelliteButton = document.getElementById('satellite-button');
-var customLayerButton = document.getElementById('custom-layer-button');
-
-// Escucha el clic en el botón de capa de satélite
-satelliteButton.addEventListener('click', function() {
-    map.setStyle('mapbox://styles/mapbox/satellite-v9');
-});
-
-// Escucha el clic en el botón de capa personalizada
-customLayerButton.addEventListener('click', function() {
-    map.setStyle('mapbox://styles/cronoser/clqa5177w007001o339rt6lzs'); // Reemplaza con la URL de tu estilo personalizado
-});

@@ -19,7 +19,7 @@
                 container: 'map',
                 style: 'mapbox://styles/cronoser/clqa5177w007001o339rt6lzs',
                 center: [-3.476992410758, 42.9537576763814855], //Ubicación del centroide Merindades
-                zoom: 10,
+                zoom: 9,
                 attributionControl: true, //para que se vea la licencia de OSM y otros
                 pitch: 0,
                 hash: true
@@ -70,16 +70,12 @@
             <hr>
             <div>
                  <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="Outdoor">Outdoor<br>
-                 <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="Outdoor">IGCC<br>
-                 <input type="checkbox" onClick="cambiarCapa(this.checked)">Satélite<br>
-                 
-                
+                 <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="Outdoor">IGCC<br>      
              </div>
              <hr>
-            <div>
-                <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="none">
-                <label for="satellite-streets-v12">3D</label><br>
-            </div>    
+             <input type="checkbox" onClick="cambiarCapa(this.checked)">Satélite<br>
+             <hr>
+             <input type="checkbox" onClick="cambiarCapa(this.checked)">3D<br> 
          </div>
 
         <div id="map"></div>
