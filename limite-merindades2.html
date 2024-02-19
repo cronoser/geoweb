@@ -5,7 +5,10 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
-    <link href='css/estilobase.css' rel='stylesheet' />
+    <link href='css/estilobase.css' rel='stylesheet' /> <!--estilo CSS nuestro-->
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script> <!-- librerias geocoder -->
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css'> <!--librerias geocoder -->
 
     <script src='js/m3d.js'></script>
     <script>
@@ -25,24 +28,25 @@
                 hash: true
             });
 
+            map.addControl(new MapboxGeocoder({ //buscador o geocoder
+                accessToken: mapboxgl.accessToken
+            }));
           //map.addControl(new mapboxgl.AttributionControl({ compact: true })); //duplica la atribución, no debe estar
             map.addControl(new mapboxgl.NavigationControl());
             map.addControl(new mapboxgl.ScaleControl()); //visualiza una escala en el mapa
+            map.addControl(new mapboxgl.FullscreenControl()); //pantalla completa
+
+            map.addControl(new mapboxgl.GeolocateControl({ //añadimos la geolocalización del usuario
+                positionOptions: {
+                enableHighAccuracy: true
+                },
+                trackUserLocation: true
+            })); //fin geolocalización usuario
 
             map.on('load', function () {
               add3D();
             }); //fin onload
 
-        //
-        /*const layerList = document.getElementById('menu');
-        const inputs = layerList.getElementsByTagName('input');
-        
-        for (const input of inputs) {
-            input.onclick = (layer) => {
-              const layerId = layer.target.id;
-            map.setStyle('mapbox://styles/mapbox/' + layerId);
-            };
-        }*/
 
 
         } // final init
@@ -51,13 +55,16 @@
 
     <body onload="init()">
         <div class="panelTopIzquierda">
-            <div>Categoría</div>
+            <div>CATEGORÍAS</div>
             <hr>
-                <input type="checkbox" checked="true" onChange="activarCascadas(this.checked)" >Cascadas<br>
-                <input type="checkbox" onChange="activarEremitorios(this.checked)">Eremitorios<br>
-                <input type="checkbox" onChange="activarNecropolis(this.checked)">Necrópolis<br>
+                <input type="checkbox" checked="true" onChange="activarCascadas(this.checked)">Cascadas<br>
+                <input type="checkbox" onChange="activarCasasdelParque(this.checked)">Casas del Parque<br>
                 <input type="checkbox" onChange="activarParquesNaturales(this.checked)">Parques Naturales<br>
-                
+            <hr>
+                <input type="checkbox" onChange="activarEremitorios(this.checked)">Eremitorios<br>
+                <input type="checkbox" onChange="activarLoberas(this.checked)">Loberas<br>
+                <input type="checkbox" onChange="activarNecropolis(this.checked)">Necrópolis<br>
+            <hr>    
                  <select onChange="zoomToRutas(this.value)">
                  <option value="17.51/42.97364/-3.756868">Cascadas</option>
                  <option selected value="19/42.9275012/-3.4881332">Castillos</option>
@@ -66,7 +73,7 @@
          </div>
 
          <div class="panelTopDerecha">  
-            <div>Capa</div>
+            <div>CAPAS</div>
             <hr>
             <div>
                  <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="Outdoor">Outdoor<br>
