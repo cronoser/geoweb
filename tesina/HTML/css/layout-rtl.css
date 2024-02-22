@@ -69,7 +69,8 @@ a:focus, a:hover, a:active {
   left: -15px;
   width: 9px;
   height: 2px;
-  background: #17bed2;
+  /*background: #17bed2; color original */
+  background: #4eb464;
   content: " ";
 }
 
@@ -119,19 +120,22 @@ h4 {
 
 ::selection {
   color: #fff;
-  background: #17bed2;
+  /*background: #17bed2;*/
+  background: #4eb464;
   text-shadow: none;
 }
 
 ::-webkit-selection {
   color: #fff;
-  background: #17bed2;
+  /*background: #17bed2;*/
+  background: #4eb464;
   text-shadow: none;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #17bed2;
+  /*background: #17bed2;*/
+  background: #4eb464;
   text-shadow: none;
 }
 
@@ -463,7 +467,8 @@ fieldset[disabled] .btn-theme {
   right: 0;
   width: 9px;
   height: 2px;
-  background: #17bed2;
+  /*background: #17bed2;*/
+  background: #4eb464;
   content: " ";
 }
 
@@ -795,7 +800,8 @@ fieldset[disabled] .btn-theme {
   	[Text Colors]
 ------------------------------------------------------------------*/
 .color-base {
-  color: #17bed2;
+  /*color: #17bed2; color original*/
+  color: #4eb464;
 }
 
 .color-white {
@@ -826,7 +832,8 @@ fieldset[disabled] .btn-theme {
   	[Background Colors]
 ------------------------------------------------------------------*/
 .bg-color-base {
-  background: #17bed2;
+  /*background: #17bed2; color azul original*/
+  background: #4eb464;;
 }
 
 .bg-color-white {

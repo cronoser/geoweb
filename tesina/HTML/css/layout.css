@@ -70,7 +70,8 @@ a:focus, a:hover, a:active {
   right: -15px;
   width: 9px;
   height: 2px;
-  background: #17bed2;
+  /*background: #17bed2;*/
+  background: #4eb464;
   content: " ";
 }
 
@@ -120,19 +121,22 @@ h4 {
 
 ::selection {
   color: #fff;
-  background: #17bed2;
+  /*background: #17bed2;*/
+  background: #4eb464;
   text-shadow: none;
 }
 
 ::-webkit-selection {
   color: #fff;
-  background: #17bed2;
+  /*background: #17bed2;*/
+  background: #4eb464;
   text-shadow: none;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #17bed2;
+  /*background: #17bed2;*/
+  background: #4eb464;
   text-shadow: none;
 }
 
@@ -178,7 +182,8 @@ h4 {
   left: -20px;
   font-size: 60px;
   display: inline-block;
-  color: #17bed2;
+  /*color: #17bed2;*/
+  color: #4eb464;
   content: '“';
 }
 
@@ -801,7 +806,8 @@ fieldset[disabled] .btn-theme {
   	[Text Colors]
 ------------------------------------------------------------------*/
 .color-base {
-  color: #17bed2;
+  /*color: #17bed2;*/
+  color: #4eb464;
 }
 
 .color-white {
@@ -832,7 +838,8 @@ fieldset[disabled] .btn-theme {
   	[Background Colors]
 ------------------------------------------------------------------*/
 .bg-color-base {
-  background: #17bed2;
+  /*background: #17bed2;*/
+  background: #4eb464;
 }
 
 .bg-color-white {
