@@ -77,7 +77,23 @@ function activarCascadas(estado){
     } else { 
         map.setLayoutProperty('cascadas-merindades','visibility','none');
     }
-} //fin funcion
+} //fin funcion cascadas
+
+function activarCastillos(estado){
+    if (estado){
+        map.setLayoutProperty('castillos-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('castillos-merindades','visibility','none');
+    }
+} //fin funcion castillos
+
+function activarDolmenes(estado){
+    if (estado){
+        map.setLayoutProperty('megalitos-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('megalitos-merindades','visibility','none');
+    }
+} //fin funcion Dolmenes
 
 function activarEremitorios(estado){
     if (estado){
@@ -85,7 +101,15 @@ function activarEremitorios(estado){
     } else { 
         map.setLayoutProperty('eremitorios-merindades','visibility','none');
     }
-} //fin funcion
+} //fin funcion Eremitorios
+
+function activarLoberas(estado){
+    if (estado){
+        map.setLayoutProperty('loberas-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('loberas-merindades','visibility','none');
+    }
+} //fin funcion Eremitorios
 
 function activarNecropolis(estado){
     if (estado){
@@ -93,7 +117,7 @@ function activarNecropolis(estado){
     } else { 
         map.setLayoutProperty('necropolis-merindades','visibility','none');
     }
-} //fin funcion
+} //fin funcion Necropolis
 
 function activarParquesNaturales(estado){
     if (estado){
@@ -101,7 +125,18 @@ function activarParquesNaturales(estado){
     } else { 
         map.setLayoutProperty('pn-merindades','visibility','none');
     }
-} //fin funcion
+} //fin funcion Parques Naturales
+
+function activarTemplos(estado){
+    if (estado){
+        map.setLayoutProperty('templos-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('templos-merindades','visibility','none');
+    }
+} //fin funcion Templos
+
+
+
 
 
 function cambiarCapa(estado){
