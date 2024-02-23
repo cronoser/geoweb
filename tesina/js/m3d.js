@@ -79,6 +79,14 @@ function activarCascadas(estado){
     }
 } //fin funcion cascadas
 
+function activarCasasdelParque(estado){
+    if (estado){
+        map.setLayoutProperty('casasparque-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('casasparque-merindades','visibility','none');
+    }
+} //fin funcion cascadas
+
 function activarCastillos(estado){
     if (estado){
         map.setLayoutProperty('castillos-merindades','visibility','visible');
