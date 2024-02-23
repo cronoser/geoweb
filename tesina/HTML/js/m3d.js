@@ -1,4 +1,4 @@
-function add3D() {
+function add3D(terreno) {
 
     map.addSource('mapbox-dem', {
         'type': 'raster-dem',
@@ -7,69 +7,63 @@ function add3D() {
         'maxzoom': 14
     });
 
-    //Mapbox Satellite
-    map.addSource('icgc-dem', {
-        'type': 'raster-dem',
-        "tiles": [
-        "https://tilemaps.icgc.cat/tileserver/tileserver.php/terreny_icgc_2m_rgb/{z}/{x}/{y}.png"
-      ],
-        'tileSize': 512,
-        'maxzoom': 14
-    });
 
-    //IGN Base Orto
-    map.addSource('IGN-BaseOrto', {
-        'type': 'raster-dem',
-        "tiles": [
-        "https://tms-ign-base.idee.es/1.0.0/IGNBaseOrto/{z}/{x}/{-y}.png"
-      ],
-        'tileSize': 512,
-        'maxzoom': 16
-    });
-    
+    map.setFog({});
 
-
-   map.setFog({});
-
-
-    map.setTerrain({
-        'source': 'mapbox-dem',
-        'exaggeration': 1.5
-    });
-
+    /*
+        map.setTerrain({
+            'source': 'mapbox-dem',
+            'exaggeration': 1.5
+        });
+    */
 
     //edificios de los estilos Mapbox
-/*
+
 
     map.addLayer({
-            'id': '3d-buildings',
-            'source': 'composite',
-            'source-layer': 'building',
-            'filter': ['==', 'extrude', 'true'],
-            'type': 'fill-extrusion',
-            'minzoom': 15,
-            'paint': {
-                'fill-extrusion-color': '#aaa',
-                'fill-extrusion-height': ['get', 'height'],                    
-                'fill-extrusion-opacity': 0.9
-            }
-        });
-*/
+        'id': '3d-buildings',
+        'source': 'composite',
+        'source-layer': 'building',
+        'filter': ['==', 'extrude', 'true'],
+        'type': 'fill-extrusion',
+        'minzoom': 13,
+        'layout': {
+            'visibility': 'none',
+        },
+        'paint': {
+            'fill-extrusion-color': '#aaa',
+            'fill-extrusion-height': ['get', 'height'],
+            'fill-extrusion-opacity': 0.9
+        }
+    });
 
-} //fin funcion
 
-function changeTerrain(terreno){
 
-    if(terreno){
+    changeTerrain(terreno);
+} //fin funcion add3d
+
+
+function changeTerrain(terreno) {
+
+    if (terreno == "mapbox-dem") {
+
+        console.info("changeTerrain", terreno);
         map.setTerrain({
             'source': terreno,
             'exaggeration': 1.5
         });
-    }else{
+    } else if (terreno == "none") {
         map.setTerrain(null);
+    } else {
+        map.setTerrain({
+            'source': "mapbox-dem",
+            'exaggeration': 1.5
+        });
     }
 
-} //fin funcion
+
+} //fin funcion changeTerrain
+
 
 function activarCascadas(estado){
     if (estado){
@@ -77,7 +71,31 @@ function activarCascadas(estado){
     } else { 
         map.setLayoutProperty('cascadas-merindades','visibility','none');
     }
-} //fin funcion
+} //fin funcion cascadas
+
+function activarCasasParque(estado){
+    if (estado){
+        map.setLayoutProperty('casasparque-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('casasparque-merindades','visibility','none');
+    }
+} //fin funcion cascadas
+
+function activarCastillos(estado){
+    if (estado){
+        map.setLayoutProperty('castillos-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('castillos-merindades','visibility','none');
+    }
+} //fin funcion castillos
+
+function activarDolmenes(estado){
+    if (estado){
+        map.setLayoutProperty('megalitos-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('megalitos-merindades','visibility','none');
+    }
+} //fin funcion Dolmenes
 
 function activarEremitorios(estado){
     if (estado){
@@ -85,7 +103,15 @@ function activarEremitorios(estado){
     } else { 
         map.setLayoutProperty('eremitorios-merindades','visibility','none');
     }
-} //fin funcion
+} //fin funcion Eremitorios
+
+function activarLoberas(estado){
+    if (estado){
+        map.setLayoutProperty('loberas-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('loberas-merindades','visibility','none');
+    }
+} //fin funcion Eremitorios
 
 function activarNecropolis(estado){
     if (estado){
@@ -93,7 +119,7 @@ function activarNecropolis(estado){
     } else { 
         map.setLayoutProperty('necropolis-merindades','visibility','none');
     }
-} //fin funcion
+} //fin funcion Necropolis
 
 function activarParquesNaturales(estado){
     if (estado){
@@ -101,7 +127,18 @@ function activarParquesNaturales(estado){
     } else { 
         map.setLayoutProperty('pn-merindades','visibility','none');
     }
-} //fin funcion
+} //fin funcion Parques Naturales
+
+function activarTemplos(estado){
+    if (estado){
+        map.setLayoutProperty('templos-merindades','visibility','visible');
+    } else { 
+        map.setLayoutProperty('templos-merindades','visibility','none');
+    }
+} //fin funcion Templos
+
+
+
 
 
 function cambiarCapa(estado){

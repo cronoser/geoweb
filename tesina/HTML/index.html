@@ -31,7 +31,7 @@
         <link href='css/estilomapa.css' rel='stylesheet' /> 
 
         <!-- Scripts nuestros -->
-        <script src='js/m3d.js'></script>
+        <script src='/tesina/HTML/js/m3d.js'></script>
         <script src='js/edificio3d.js'></script>
 
         <!-- GLOBAL MANDATORY STYLES -->
@@ -85,7 +85,7 @@
                 })); //fin buscador o geocoder */
     
                 map.on('load', function () {
-                  add3D();
+                  add3D('mapbox-dem');
                 }); //fin onload
     
     
@@ -173,7 +173,7 @@
                 <h5>CATEGORÍAS</h5>
                 <h6>Naturaleza</h6>
                     <input type="checkbox" onChange="activarCascadas(this.checked)"> Cascadas<br>
-                    <input type="checkbox" onChange="activarCasasdelParque(this.checked)"> Casas del Parque<br>
+                    <input type="checkbox" onChange="activarCasasParque(this.checked)"> Casas del Parque<br>
                     <input type="checkbox" onChange="activarParquesNaturales(this.checked)"> Parques Naturales<br>
                 <hr>
                 <h6>Patrimonio</h6>
@@ -190,18 +190,15 @@
             <!-- Panel Opciones Mapa derecho -->  
             <div class="panelTopDerecha">  
                 <h5>CAPAS</h5>
-                <hr>
                 <div>
-                    <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="Outdoor"> Outdoor<br>
-                    <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="IGCC"> IGCC<br>      
+                    <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="mapbox-dem"> Outdoor 3D<br>
+                    <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="none"> 2D
                 </div>
                 <hr>
                 <input type="checkbox" onClick="cambiarCapa(this.checked)"> Satélite<br>
-                <hr>
-                <input type="checkbox" onClick="cambiarCapa(this.checked)"> 3D<br> 
             </div>
 
-            <div id="map"></div><!-- cuando la librería cargue el mapa lo va a cargar aquí -->
+            <div id="map" class="mapboxgl-map"></div><!-- cuando la librería cargue el mapa lo va a cargar aquí -->
             
         </div> 
         <!-- End Mapa -->    
