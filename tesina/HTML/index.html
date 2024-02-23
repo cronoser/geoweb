@@ -168,46 +168,38 @@
         <!--========== PAGE LAYOUT ==========-->
         <!-- Mapa -->
         <div id="main">    
-        
-        <div id="mySidenav" class="sidenav">
-            <a href="#" id="about">About</a>
-            <a href="#" id="blog">Blog</a>
-            <a href="#" id="projects">Projects</a>
-            <a href="#" id="contact">Contact</a>
-        </div>  <!-- End SideNav -->
+            <!-- Panel Opciones Mapa izquierdo -->  
+            <div class="panelTopIzquierda" >
+                <h5>CATEGORÍAS</h5>
+                <h6>Naturaleza</h6>
+                    <input type="checkbox" onChange="activarCascadas(this.checked)"> Cascadas<br>
+                    <input type="checkbox" onChange="activarCasasdelParque(this.checked)"> Casas del Parque<br>
+                    <input type="checkbox" onChange="activarParquesNaturales(this.checked)"> Parques Naturales<br>
+                <hr>
+                <h6>Patrimonio</h6>
+                <input type="checkbox" onChange="activarCastillos(this.checked)"> Castillos<br>            
+                <input type="checkbox" onChange="activarTemplos(this.checked)"> Ermitas/Iglesias<br>
+                <input type="checkbox" onChange="activarDolmenes(this.checked)"> Megalitos<br>
+                <hr>
+                <h6>Otros</h6>
+                    <input type="checkbox" onChange="activarEremitorios(this.checked)"> Eremitorios<br>
+                    <input type="checkbox" onChange="activarLoberas(this.checked)"> Loberas<br>
+                    <input type="checkbox" onChange="activarNecropolis(this.checked)"> Necrópolis<br>
+            </div>
             
-        <div class="panelTopIzquierda" >
-            <h5>CATEGORÍAS</h5>
-            <hr>
-            <h6>Naturaleza</h6>
-                <input type="checkbox" onChange="activarCascadas(this.checked)"> Cascadas<br>
-                <input type="checkbox" onChange="activarCasasdelParque(this.checked)"> Casas del Parque<br>
-                <input type="checkbox" onChange="activarParquesNaturales(this.checked)"> Parques Naturales<br>
-            <hr>
-            <h6>Patrimonio</h6>
-            <input type="checkbox" onChange="activarCastillos(this.checked)"> Castillos<br>            
-            <input type="checkbox" onChange="activarTemplos(this.checked)"> Ermitas/Iglesias<br>
-            <input type="checkbox" onChange="activarDolmenes(this.checked)"> Megalitos<br>
-            <hr>
-            <h6>Otros</h6>
-                <input type="checkbox" onChange="activarEremitorios(this.checked)"> Eremitorios<br>
-                <input type="checkbox" onChange="activarLoberas(this.checked)"> Loberas<br>
-                <input type="checkbox" onChange="activarNecropolis(this.checked)"> Necrópolis<br>
-        </div>
-        
-        
-         <div class="panelTopDerecha">  
-            <h5>CAPAS</h5>
-            <hr>
-            <div>
-                 <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="Outdoor"> Outdoor<br>
-                 <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="IGCC"> IGCC<br>      
-             </div>
-             <hr>
-             <input type="checkbox" onClick="cambiarCapa(this.checked)"> Satélite<br>
-             <hr>
-             <input type="checkbox" onClick="cambiarCapa(this.checked)"> 3D<br> 
-         </div>
+            <!-- Panel Opciones Mapa derecho -->  
+            <div class="panelTopDerecha">  
+                <h5>CAPAS</h5>
+                <hr>
+                <div>
+                    <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="Outdoor"> Outdoor<br>
+                    <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="IGCC"> IGCC<br>      
+                </div>
+                <hr>
+                <input type="checkbox" onClick="cambiarCapa(this.checked)"> Satélite<br>
+                <hr>
+                <input type="checkbox" onClick="cambiarCapa(this.checked)"> 3D<br> 
+            </div>
 
             <div id="map"></div><!-- cuando la librería cargue el mapa lo va a cargar aquí -->
             
