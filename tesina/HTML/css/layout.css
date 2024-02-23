@@ -119,6 +119,12 @@ h4 {
   font-size: 22px;
 }
 
+h7 {
+  font-size: 16px;
+  color: #4eb464;
+}
+
+
 ::selection {
   color: #fff;
   /*background: #17bed2;*/

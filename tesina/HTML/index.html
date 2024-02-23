@@ -168,25 +168,33 @@
         <!--========== PAGE LAYOUT ==========-->
         <!-- Mapa -->
         <div id="main">    
-    <body onload="init()">
-        <div class="panelTopIzquierda">
+        
+        <div id="mySidenav" class="sidenav">
+            <a href="#" id="about">About</a>
+            <a href="#" id="blog">Blog</a>
+            <a href="#" id="projects">Projects</a>
+            <a href="#" id="contact">Contact</a>
+        </div>  <!-- End SideNav -->
+            
+        <div class="panelTopIzquierda" >
             <h5>CATEGORÍAS</h5>
             <hr>
+            <h6>Naturaleza</h6>
                 <input type="checkbox" onChange="activarCascadas(this.checked)"> Cascadas<br>
                 <input type="checkbox" onChange="activarCasasdelParque(this.checked)"> Casas del Parque<br>
                 <input type="checkbox" onChange="activarParquesNaturales(this.checked)"> Parques Naturales<br>
             <hr>
+            <h6>Patrimonio</h6>
+            <input type="checkbox" onChange="activarCastillos(this.checked)"> Castillos<br>            
+            <input type="checkbox" onChange="activarTemplos(this.checked)"> Ermitas/Iglesias<br>
+            <hr>
+            <h6>Patrimonio</h6>
                 <input type="checkbox" onChange="activarEremitorios(this.checked)"> Eremitorios<br>
                 <input type="checkbox" onChange="activarLoberas(this.checked)"> Loberas<br>
                 <input type="checkbox" onChange="activarNecropolis(this.checked)"> Necrópolis<br>
-            <hr>    
-                 <select onChange="zoomToRutas(this.value)">
-                 <option value="17.51/42.97364/-3.756868">Cascadas</option>
-                 <option selected value="19/42.9275012/-3.4881332">Castillos</option>
-                 <option value="20.01/42.7810534/-3.3184737">Necrópolis</option>
-             </select>
-         </div>
-
+        </div>
+        
+        
          <div class="panelTopDerecha">  
             <h5>CAPAS</h5>
             <hr>
