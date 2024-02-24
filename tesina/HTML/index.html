@@ -31,7 +31,7 @@
         <link href='css/estilomapa.css' rel='stylesheet' /> 
 
         <!-- Scripts nuestros -->
-        <script src='tesina/js/HTML/js/m3d.js'></script>
+        <script src='/tesina/HTML/js/m3d.js'></script>
         <script src='js/edificio3d.js'></script>
 
         <!-- GLOBAL MANDATORY STYLES -->
@@ -192,10 +192,9 @@
                 <h5>CAPAS</h5>
                 <div>
                     <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="mapbox-dem"> Outdoor 3D<br>
-                    <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="none"> 2D
+                    <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="none"> 2D<br>
+                    <input type="checkbox" onClick="cambiarCapa(this.checked)"> Satélite<br>
                 </div>
-                <hr>
-                <input type="checkbox" onClick="cambiarCapa(this.checked)"> Satélite<br>
             </div>
 
             <div id="map" class="mapboxgl-map"></div><!-- cuando la librería cargue el mapa lo va a cargar aquí -->
