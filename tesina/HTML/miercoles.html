@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!-- ==============================
+    Projecto:       Tesina Mapa de las Merindades
+    Máster:         Sistemas de Información Geográfica en la Universidad Politécnica de Cataluña
+    Autor:          Oscar Zorrilla Alonso
+================================== -->
+<html lang="en" class="no-js">
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Tesina: El mapa de Las Merindades</title>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        
+        <!-- Librerías MapBox -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
+
+        <!-- librerias MapBox geocoder -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script> 
+        <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css'> 
+    
+        <!--librería edificios 3d-->
+        <script src="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.min.js" type="text/javascript"></script> 
+        <link href="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.css" rel="stylesheet"></link> 
+        
+        <!-- Estilo CSS mapa -->
+        <link href='css/estilomapa.css' rel='stylesheet' /> 
+
+        <!-- Scripts nuestros -->
+        <script src='js/m3d.js'></script>
+        <script src='js/edificio3d.js'></script>
+
+        <!-- GLOBAL MANDATORY STYLES -->
+        <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- PAGE LEVEL PLUGIN STYLES -->
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- THEME STYLES -->
+        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico"/> 
+
+        <!-- Script mapa-->
+        <script>
+        
+            var map;
+            function init() {
+                //Añadir nuestro token!!
+                mapboxgl.accessToken =
+                    'pk.eyJ1IjoiY3Jvbm9zZXIiLCJhIjoiY2xwd2s5cWNiMGo4bTJzczg0OHZkcXU2NyJ9.aUpxfCiDYd7SWMLfZytzXg';
+                 map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/cronoser/clqa5177w007001o339rt6lzs',
+                    center: [-3.476992410758, 42.9537576763814855], //Ubicación del centroide Merindades
+                    zoom: 9,
+                    attributionControl: true, //para que se vea la licencia de OSM y otros
+                    pitch: 30,
+                    hash: true
+                });
+    
+              //map.addControl(new mapboxgl.AttributionControl({ compact: true })); //duplica la atribución, no debe estar
+                map.addControl(new mapboxgl.NavigationControl());
+                map.addControl(new mapboxgl.ScaleControl()); //visualiza una escala en el mapa
+                map.addControl(new mapboxgl.FullscreenControl()); //pantalla completa
+    
+                map.addControl(new mapboxgl.GeolocateControl({ //añadimos la geolocalización del usuario
+                    positionOptions: {
+                    enableHighAccuracy: true
+                    },
+                    showAccuracyCircle: true,
+                    trackUserLocation: true
+                })); //fin geolocalización usuario
+    
+               /* map.addControl(new MapboxGeocoder({ //buscador o geocoder
+                    accessToken: mapboxgl.accessToken
+                })); //fin buscador o geocoder */
+    
+                map.on('load', function () {
+                  add3D('mapbox-dem');
+                }); //fin onload
+    
+    
+    
+            } // final init
+        </script>
+
+    </head>
+    <!-- END HEAD -->
+
+    <!-- BODY -->
+    <body onLoad="init()">
+
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <!-- Navbar -->
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="menu-container">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                        <!-- Logo -->
+                        <div class="navbar-logo">
+                            <a class="navbar-logo-wrap" href="index.html">
+                                <img class="navbar-logo-img" src="img/logo_merindades_verde_claro_818.png" alt="MerinMapa Logo">
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="menu-container">
+                            <ul class="navbar-nav navbar-nav-right">
+                                <!-- Home -->
+                                <li class="nav-item">
+                                    <a class="nav-item-child active" href="index.html">
+                                        Inicio
+                                    </a>
+                                </li>
+                                <!-- End Home -->
+
+                                <!-- About -->
+                                <li class="nav-item">
+                                    <a class="nav-item-child" href="about.html">
+                                        Equipo
+                                    </a>
+                                </li>
+                                <!-- End About -->
+
+                                <!-- Licencia -->
+                                <li class="nav-item">
+                                    <a class="nav-item-child" href="licencias.html">
+                                        Licencias
+                                    </a>
+                                </li>
+                                <!-- End Licencia -->
+
+                                <!-- Contact -->
+                                <li class="nav-item">
+                                    <a class="nav-item-child" href="contact.html">
+                                        Contacto
+                                    </a>
+                                </li>
+                                <!-- End Contact -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Navbar Collapse -->
+                </div>
+            </nav>
+            <!-- Navbar -->
+        </header>
+        <!--========== END HEADER ==========-->
+
+        <!--========== PAGE LAYOUT ==========-->
+        <!-- Mapa -->
+        <div id="main">    
+            <!-- Panel Opciones Mapa izquierdo -->  
+            <div class="panelTopIzquierda" >
+                <h5>CATEGORÍAS</h5>
+                <h6>Naturaleza</h6>
+                    <input type="checkbox" onChange="activarCascadas(this.checked)"> Cascadas<br>
+                    <input type="checkbox" onChange="activarCasasParque(this.checked)"> Casas del Parque<br>
+                    <input type="checkbox" onChange="activarParquesNaturales(this.checked)"> Parques Naturales<br>
+                <hr>
+                <h6>Patrimonio</h6>
+                    <input type="checkbox" onChange="activarCastillos(this.checked)"> Castillos<br>            
+                    <input type="checkbox" onChange="activarTemplos(this.checked)"> Ermitas/Iglesias<br>
+                    <input type="checkbox" onChange="activarDolmenes(this.checked)"> Megalitos<br>
+                <hr>
+                <h6>Otros</h6>
+                    <input type="checkbox" onChange="activarEremitorios(this.checked)"> Eremitorios<br>
+                 <!--   <input type="checkbox" onChange="activarLoberas(this.checked)"> Loberas<br> -->
+                    <input type="checkbox" onChange="activarNecropolis(this.checked)"> Necrópolis<br>
+            </div>
+            
+            <!-- Panel Opciones Mapa derecho -->  
+            <div class="panelTopDerecha">  
+                <h5>CAPAS</h5>
+                <div>
+                    <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="mapbox-dem"> Outdoor 3D<br>
+                    <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="none"> 2D<br>
+                    <input type="checkbox" onClick="cambiarCapa(this.checked)"> Satélite<br>
+                </div>
+            </div>
+
+            <div id="map" class="mapboxgl-map"></div><!-- cuando la librería cargue el mapa lo va a cargar aquí -->
+            
+        </div> 
+        <!-- End Mapa -->    
+       
+        <!--========== END PAGE LAYOUT ==========-->
+
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- CORE PLUGINS -->
+        <script src="vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL PLUGINS -->
+        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
+        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL SCRIPTS -->
+        <script src="js/layout.min.js" type="text/javascript"></script>
+        <script src="js/components/wow.min.js" type="text/javascript"></script>
+        <script src="js/components/swiper.min.js" type="text/javascript"></script>
+        <script src="js/components/masonry.min.js" type="text/javascript"></script>
+
+    </body>
+    <!-- END BODY -->
+</html>
