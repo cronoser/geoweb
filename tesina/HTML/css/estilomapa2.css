@@ -11,7 +11,7 @@ body {
     background-color: #ffffff
 }
 
-.panelTopIzquierda {
+/*.panelTopIzquierda {
     position: absolute;
     top: 110px;
     left: 10px;
@@ -22,7 +22,7 @@ body {
     font-size: 16px;
     color: #4eb464;
     border-radius: 5px;
-}
+}*/
 
 .panelTopIzquierda label{
     font-size:0.85em;
@@ -37,11 +37,11 @@ body {
     position: absolute;
     top: 110px;
     right: 50px;
-    width: 140px;
+    width: 160px;
     z-index: 1000;
     background-color: rgba(255,255,255,0.9);
     padding: 10px;
-    font-size: 15px;
+    font-size: 16px;
     color: #4eb464;
     border-radius: 5px;
 }
@@ -71,7 +71,7 @@ body {
 
 /*MENU HAMBURGUESA (CATEGORÍAS) */
 ul { list-style: none; }
-/*a { text-decoration: none; color: black;}*/
+a { text-decoration: none; color: black;}
 /*body {
    font-family: 'Dosis', sans-serif;
    background: #FF5722;
@@ -84,7 +84,8 @@ ul { list-style: none; }
 
 
 #menu-wrapper #hamburger-menu {
-    position: relative;
+    /*position: relative;*/
+    position: absolute;
     width: 25px;
     height: 20px;
     margin: 15px;
@@ -150,10 +151,12 @@ ul { list-style: none; }
     font-size: 16px;
     padding: 20px;
     text-transform: uppercase;
-    border-top: 1px solid #dbdcd2;
+    /*border-top: 1px solid #dbdcd2;*/
+    border-top: 101px solid #dbdcd2;
 }
 #menu-container .menu-list li:first-of-type {
-    border-top: 0;
+    /*border-top: 0;*/
+    border-top: 100;
 }
 
 .accordion-toggle, .accordion-content {

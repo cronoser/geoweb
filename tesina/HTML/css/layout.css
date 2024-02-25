@@ -243,7 +243,7 @@ fieldset[disabled] .btn-theme {
 
 .btn-base-bg {
   color: #fff;
-  background: #17bed2;
+  background: #4eb464;
   border-color: transparent;
   border-width: 0;
 }
@@ -408,7 +408,7 @@ fieldset[disabled] .btn-theme {
 }
 
 .header .navbar-toggle:hover .toggle-icon {
-  background: #17bed2;
+  background: #4eb464;
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
@@ -417,7 +417,7 @@ fieldset[disabled] .btn-theme {
 .header .navbar-toggle:hover .toggle-icon:before, .header .navbar-toggle:hover .toggle-icon:after {
   width: 21px;
   height: 1px;
-  background: #17bed2;
+  background: #4eb464;
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
@@ -430,9 +430,11 @@ fieldset[disabled] .btn-theme {
 /* Navbar Logo */
 .header .navbar-logo {
   width: 100px;
-  height: 100px;
+  height: 70px; 
+  /* height: 100px; */
   float: left;
-  max-height: 95px;
+  max-height: 65px;
+  /* max-height: 95px; */
   line-height: 65px;
 }
 
@@ -479,7 +481,7 @@ fieldset[disabled] .btn-theme {
   font-family: Hind, sans-serif;
   text-transform: uppercase;
   line-height: 55px;
-  padding: 20px;
+  padding: 0px;
 }
 
 .header .nav-item-child.active {
@@ -492,7 +494,7 @@ fieldset[disabled] .btn-theme {
   left: 0;
   width: 9px;
   height: 2px;
-  background: #17bed2;
+  background: #4eb464;
   content: " ";
 }
 
@@ -536,7 +538,7 @@ fieldset[disabled] .btn-theme {
   }
   .header .nav-item-child.active:after {
     position: absolute;
-    top: 20px;
+    top: 10px;
   }
 }
 

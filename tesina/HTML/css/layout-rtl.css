@@ -180,7 +180,7 @@ h4 {
   top: 0;
   right: -20px;
   font-size: 60px;
-  color: #17bed2;
+  color: #4eb464;
   content: open-quote;
 }
 
@@ -234,7 +234,7 @@ fieldset[disabled] .btn-theme {
 
 .btn-base-bg {
   color: #fff;
-  background: #17bed2;
+  background: #4eb464;
   border-color: transparent;
   border-width: 0;
 }
@@ -383,7 +383,7 @@ fieldset[disabled] .btn-theme {
 }
 
 .header .navbar-toggle:hover .toggle-icon {
-  background: #17bed2;
+  background: #4eb464;
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
@@ -392,7 +392,7 @@ fieldset[disabled] .btn-theme {
 .header .navbar-toggle:hover .toggle-icon:before, .header .navbar-toggle:hover .toggle-icon:after {
   width: 21px;
   height: 1px;
-  background: #17bed2;
+  background: #4eb464;
   transition-duration: 300ms;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);

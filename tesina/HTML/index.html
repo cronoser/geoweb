@@ -27,8 +27,10 @@
         <script src="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.min.js" type="text/javascript"></script> 
         <link href="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.css" rel="stylesheet"></link> 
         
-        <!-- Estilo CSS mapa -->
-        <link href='css/estilomapa.css' rel='stylesheet' /> 
+        <!-- Menú mapa -->
+        <link href='css/estilomapadesplegable.css' rel='stylesheet' /> 
+        <script src="js/menu_acordeon.js"></script>
+        <script src="https://kit.fontawesome.com/a1547bc13d.js" crossorigin="anonymous"></script> <!-- añadir iconos menú-->
 
         <!-- Scripts nuestros -->
         <script src='js/m3d.js'></script>
@@ -167,41 +169,46 @@
 
         <!--========== PAGE LAYOUT ==========-->
         <!-- Mapa -->
-        <div id="main">    
-            <!-- Panel Opciones Mapa izquierdo -->  
-            <div class="panelTopIzquierda" >
-                <h5>CATEGORÍAS</h5>
-                <h6>Naturaleza</h6>
-                    <input type="checkbox" onChange="activarCascadas(this.checked)"> Cascadas<br>
-                    <input type="checkbox" onChange="activarCasasParque(this.checked)"> Casas del Parque<br>
-                    <input type="checkbox" onChange="activarParquesNaturales(this.checked)"> Parques Naturales<br>
-                <hr>
-                <h6>Patrimonio</h6>
-                    <input type="checkbox" onChange="activarCastillos(this.checked)"> Castillos<br>            
-                    <input type="checkbox" onChange="activarTemplos(this.checked)"> Ermitas/Iglesias<br>
-                    <input type="checkbox" onChange="activarDolmenes(this.checked)"> Megalitos<br>
-                <hr>
-                <h6>Otros</h6>
-                    <input type="checkbox" onChange="activarEremitorios(this.checked)"> Eremitorios<br>
-                 <!--   <input type="checkbox" onChange="activarLoberas(this.checked)"> Loberas<br> -->
-                    <input type="checkbox" onChange="activarNecropolis(this.checked)"> Necrópolis<br>
-            </div>
+        <!--  <div id="main">   -->
+            <!-- Panel Opciones Mapa izquierdo  -->
+            <!--<div class="panelTopIzquierda" > -->
+
+                <!--<h5>CATEGORÍAS</h5> -->
+                <button class="accordion"><h6><i class="fas fa-mountain"></i> Naturaleza</h6></button><br>
+                    <div class="panel"><hr>
+                    <input type="checkbox" onChange="activarCascadas(this.checked)"> <i class="fas fa-tint"></i> Cascadas<br>
+                    <input type="checkbox" onChange="activarCasasParque(this.checked)"> <i class="fas fa-home"></i> Casas del Parque<br>
+                    <input type="checkbox" onChange="activarParquesNaturales(this.checked)"> <i class="fa-solid fa-tree"></i> Parques Naturales<br>
+                    </div>
+                <button class="accordion"><h6><i class="fas fa-monument"></i> Patrimonio</h6></button>
+                    <div class="panel"><hr>
+                    <input type="checkbox" onChange="activarCastillos(this.checked)"> <i class="fa-solid fa-chess-rook"></i> Castillos<br>            
+                    <input type="checkbox" onChange="activarTemplos(this.checked)"> <i class="fa-solid fa-church"></i> Ermitas/Iglesias<br>
+                    <input type="checkbox" onChange="activarDolmenes(this.checked)"> <i class="fas fa-archway"></i> Megalitos<br>
+                    </div>
+                <button class="accordion"><h6><i class="fas fa-map-marker"></i> Otros</h6>
+                    <div class="panel"><hr>
+                    <input type="checkbox" onChange="activarEremitorios(this.checked)"> <i class="fas fa-pray"></i> Eremitorios<br>
+                    <input type="checkbox" onChange="activarLoberas(this.checked)"> <i class="fa-brands fa-wolf-pack-battalion"></i> Loberas<br>
+                    <input type="checkbox" onChange="activarNecropolis(this.checked)"> <i class="fas fa-boxes"></i> Necrópolis<br> 
+                    </div>
+                </button>
+            <!--</div>-->
             
             <!-- Panel Opciones Mapa derecho -->  
             <div class="panelTopDerecha">  
                 <h5>CAPAS</h5>
                 <div>
-                    <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="mapbox-dem"> Outdoor 3D<br>
-                    <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="none"> 2D<br>
-                    <input type="checkbox" onClick="cambiarCapa(this.checked)"> Satélite<br>
+                    <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="mapbox-dem"> <i class="fa-solid fa-cube"></i> Outdoor 3D<br>
+                    <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="none"> <i class="fa-solid fa-square"></i> 2D<br>
+                    <input type="checkbox" onClick="cambiarCapa(this.checked)"> <i class="fa-solid fa-satellite"></i> Satélite<br>
                 </div>
             </div>
 
             <div id="map" class="mapboxgl-map"></div><!-- cuando la librería cargue el mapa lo va a cargar aquí -->
             
-        </div> 
+        </div>  
         <!-- End Mapa -->    
-       
         <!--========== END PAGE LAYOUT ==========-->
 
 
