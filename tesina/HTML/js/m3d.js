@@ -132,8 +132,10 @@ function activarNecropolis(estado){
 function activarParquesNaturales(estado){
     if (estado){
         map.setLayoutProperty('pn-merindades','visibility','visible');
+        map.setLayoutProperty('pn-merindades-nombre','visibility','visible');
     } else { 
         map.setLayoutProperty('pn-merindades','visibility','none');
+        map.setLayoutProperty('pn-merindades-nombre','visibility','none');
     }
 } //fin funcion Parques Naturales
 
