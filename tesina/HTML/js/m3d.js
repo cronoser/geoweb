@@ -112,14 +112,14 @@ function activarLoberas(estado){
         map.setLayoutProperty('loberas-merindades','visibility','none');
     }
 } //fin funcion Loberas
-
+/*
 function activarMurosLoberas(estado){
     if (estado){
         map.setLayoutProperty('muros-loberas-merindades','visibility','visible');
     } else { 
         map.setLayoutProperty('muros-loberas-merindades','visibility','none');
     }
-} //fin funcion Muros Loberas
+} //fin funcion Muros Loberas*/
 
 function activarNecropolis(estado){
     if (estado){
