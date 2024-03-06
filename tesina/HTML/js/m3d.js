@@ -8,18 +8,20 @@ function add3D(terreno) {
     });
 
 
-    map.setFog({});
+    map.setFog({
+        "range": [0.8, 8],
+        "color": "#dc9f9f",
+        "horizon-blend": 0.5,
+        "high-color": "#245bde",
+        "space-color": "#000000",
+        "star-intensity": 0.15
+    });
 
-    /*
-        map.setTerrain({
-            'source': 'mapbox-dem',
-            'exaggeration': 1.5
-        });
-    */
+
 
     //edificios de los estilos Mapbox
 
-
+/*
     map.addLayer({
         'id': '3d-buildings',
         'source': 'composite',
@@ -37,7 +39,7 @@ function add3D(terreno) {
         }
     });
 
-
+*/
 
     changeTerrain(terreno);
 } //fin funcion add3d
