@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- ==============================
+    Projecto:       Tesina Mapa de las Merindades
+    Máster:         Sistemas de Información Geográfica en la Universidad Politécnica de Cataluña
+    Autor:          Oscar Zorrilla Alonso
+================================== -->
+<html lang="en">
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8" />
+        <title>Tesina: El mapa de Las Merindades</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+                
+        <!-- Librerías MapBox -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
+
+        <!-- librerias MapBox geocoder -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script> 
+        <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css'> 
+    
+        <!--librería edificios 3d-->
+        <script src="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.min.js" type="text/javascript"></script> 
+        <link href="https://cdn.jsdelivr.net/gh/jscastro76/threebox@v.2.2.2/dist/threebox.css" rel="stylesheet"></link> 
+        
+        <!-- Estilo CSS mapa -->
+        <link href='css/estilomapa.css' rel='stylesheet' /> 
+        <script src="https://kit.fontawesome.com/a1547bc13d.js" crossorigin="anonymous"></script> <!-- añadir iconos menú-->
+
+        <!-- Scripts nuestros -->
+        <script src='js/m3d.js'></script>
+        <script src='js/edificio3d.js'></script>
+        
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    
+        <!-- Script mapa-->
+        <script>
+                
+            var map;
+            function init() {
+                //Añadir nuestro token!!
+                mapboxgl.accessToken =
+                    'pk.eyJ1IjoiY3Jvbm9zZXIiLCJhIjoiY2xwd2s5cWNiMGo4bTJzczg0OHZkcXU2NyJ9.aUpxfCiDYd7SWMLfZytzXg';
+                map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/cronoser/clqa5177w007001o339rt6lzs',
+                    center: [-3.476992410758, 42.9537576763814855], //Ubicación del centroide Merindades
+                    zoom: 9,
+                    attributionControl: true, //para que se vea la licencia de OSM y otros
+                    pitch: 30,
+                    hash: true
+                });
+
+                map.addControl(new MapboxGeocoder({ //buscador o geocoder
+                    accessToken: mapboxgl.accessToken
+                })); //fin buscador o geocoder 
+
+            //map.addControl(new mapboxgl.AttributionControl({ compact: true })); //duplica la atribución, no debe estar
+                map.addControl(new mapboxgl.NavigationControl());
+                map.addControl(new mapboxgl.ScaleControl()); //visualiza una escala en el mapa
+                map.addControl(new mapboxgl.FullscreenControl()); //pantalla completa
+
+                map.addControl(new mapboxgl.GeolocateControl({ //añadimos la geolocalización del usuario
+                    positionOptions: {
+                    enableHighAccuracy: true
+                    },
+                    showAccuracyCircle: true,
+                    trackUserLocation: true
+                })); //fin geolocalización usuario
+
+
+
+                map.on('load', function () {
+                    add3D('mapbox-dem');
+                }); //fin onload
+
+
+
+            } // final init
+        </script>
+    </head>
+    <body onLoad="init()">
+        <!--========== HEADER ==========-->
+        <header>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <div id="logo"><img src="img/logo_merindades_verde_claro_818.png" alt="MerinMapa"></div> 
+                <a class="navbar-brand" href="#" alt="MerinMapa">MerinMapa</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-mountain"></i> Naturaleza</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <input type="checkbox" onChange="activarCascadas(this.checked)"> <i class="fas fa-tint"></i> Cascadas<br>
+                                <input type="checkbox" onChange="activarCasasParque(this.checked)"> <i class="fas fa-home"></i> Casas del Parque<br>
+                                <input type="checkbox" onChange="activarParquesNaturales(this.checked)"> <i class="fa-solid fa-tree"></i> Parques Naturales<br>
+                            </ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-monument"></i> Patrimonio</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <input type="checkbox" onChange="activarCastillos(this.checked)"> <i class="fa-solid fa-chess-rook"></i> Castillos<br>            
+                                <input type="checkbox" onChange="activarTemplos(this.checked)"> <i class="fa-solid fa-church"></i> Ermitas/Iglesias<br>
+                                <input type="checkbox" onChange="activarDolmenes(this.checked)"> <i class="fas fa-archway"></i> Megalitos<br>
+                            </ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-hiking"></i> Otro</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <input type="checkbox" onChange="activarEremitorios(this.checked)"> <i class="fas fa-pray"></i> Eremitorios<br>
+                                <input type="checkbox" onChange="activarLoberas(this.checked)"> <i class="fa-brands fa-wolf-pack-battalion"></i> Loberas<br> 
+                                <input type="checkbox" onChange="activarNecropolis(this.checked)"> <i class="fas fa-boxes"></i> Necrópolis<br>
+                            </ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Acerca de</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="licencias.html">Licencia</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </header>
+        <!--========== END HEADER ==========-->
+
+        <!--========== PAGE LAYOUT ==========-->
+        
+
+        
+        <!-- Page content-->
+        
+        <div class="container">
+            <!-- Mapa -->
+            <div id="main">    
+                <!-- Panel Opciones Mapa izquierdo -->  
+                
+                <!-- Panel Opciones Mapa derecho -->  
+                <div class="panelTopDerecha">  
+                    <h5>CAPAS</h5>
+                    <div>
+                        <input type="radio" onClick="changeTerrain(this.value)" name="dem" value="mapbox-dem"> <i class="fa-solid fa-cube"></i> Outdoor 3D<br>
+                        <input type="radio" onClick="changeTerrain(this.value)" checked name="dem" value="none"> <i class="fa-solid fa-square"></i> 2D<br>
+                        <input type="checkbox" onClick="cambiarCapa(this.checked)"> <i class="fa-solid fa-satellite"></i> Satélite<br>
+                    </div>
+                </div>
+
+                <div id="map" class="mapboxgl-map"></div><!-- cuando la librería cargue el mapa lo va a cargar aquí -->
+                
+            </div> 
+            <!-- End Mapa 
+            <div class="text-center mt-5">
+                <h1>A Bootstrap 5 Starter Template</h1>
+                <p class="lead">A complete project boilerplate built with Bootstrap</p>
+                <p>Bootstrap v5.2.3</p>
+            </div> -->
+        </div>
+
+                
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
