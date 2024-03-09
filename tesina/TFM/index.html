@@ -52,7 +52,7 @@
                     container: 'map',
                     style: 'mapbox://styles/cronoser/clqa5177w007001o339rt6lzs',
                     center: [-3.476992410758, 42.9537576763814855], //Ubicación del centroide Merindades
-                    zoom: 9,
+                    zoom: 8.08,
                     attributionControl: true, //para que se vea la licencia de OSM y otros
                     pitch: 30,
                     hash: true
@@ -62,7 +62,6 @@
                     accessToken: mapboxgl.accessToken
                 })); //fin buscador o geocoder 
 
-            //map.addControl(new mapboxgl.AttributionControl({ compact: true })); //duplica la atribución, no debe estar
                 map.addControl(new mapboxgl.NavigationControl());
                 map.addControl(new mapboxgl.ScaleControl()); //visualiza una escala en el mapa
                 map.addControl(new mapboxgl.FullscreenControl()); //pantalla completa
