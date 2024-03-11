@@ -3831,7 +3831,9 @@ textarea.form-control-lg {
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
+  background-color: #212529;
   align-items: center;
+  z-index: 10;
 }
 
 .navbar-toggler {
