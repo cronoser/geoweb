@@ -3163,6 +3163,25 @@ textarea.form-control-lg {
   --bs-btn-border-radius: 0.25rem;
 }
 
+.column1 {
+  float: left;
+  width: 50%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
 .fade {
   transition: opacity 0.15s linear;
 }
@@ -4196,10 +4215,12 @@ textarea.form-control-lg {
   --bs-card-bg: #fff;
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   display: flex;
   flex-direction: column;
   min-width: 0;
+  max-width: 300px;
   height: var(--bs-card-height);
   word-wrap: break-word;
   background-color: var(--bs-card-bg);
