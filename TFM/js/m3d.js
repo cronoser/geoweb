@@ -163,3 +163,26 @@ function cambiarCapa(estado){
 } //fin funcion
 
 
+function addParques() {
+  
+    var url=parquesGeoJSON;
+
+    map.addSource('parques', {
+        type: 'geojson',
+        data: url
+    });
+
+    map.addLayer({
+        'id': 'parques',
+        'type': 'circle',
+        'source': 'parques',
+        'paint': {
+            'circle-color': '#00ff00',
+            'circle-radius': 5,
+            'circle-stroke-color': '#ffffff',
+            'circle-stroke-width': 2
+        }
+    });
+
+
+} // fin funcion

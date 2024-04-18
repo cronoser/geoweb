@@ -46,6 +46,7 @@
         <script>
                 
             var map;
+            var parquesGeoJSON;
             function init() {
                 //Añadir nuestro token!!
                 mapboxgl.accessToken =
@@ -93,7 +94,17 @@
 
                 
                 map.on('load', function () {
+                    // reutilizamos funcion de utils para obtener geojson
+                    enviarPeticion("data/casasParque_Merindades.geojson").then(function (datos) {
+                        parquesGeoJSON = datos;
+                        addParques();
+                        addPopupToMap('parques');
+                        console.info(map.style);
+                    }); //fin peticion
+                
+                
                     add3D('mapbox-dem');
+                    //addPopupToMap('casasparque-merindades');
                 }); //fin onload
 
 
