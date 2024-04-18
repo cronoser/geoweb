@@ -95,7 +95,7 @@
                 
                 map.on('load', function () {
                     // reutilizamos funcion de utils para obtener geojson
-                    enviarPeticion("data/casasParque_Merindades.geojson").then(function (datos) {
+                    enviarPeticion("data/casasParque.geojson").then(function (datos) {
                         parquesGeoJSON = datos;
                         addParques();
                         addPopupToMap('parques');
