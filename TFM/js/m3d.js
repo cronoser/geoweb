@@ -19,7 +19,7 @@ function add3D(terreno) {
 
 
 
-    //edificios de los estilos Mapbox
+       //edificios de los estilos Mapbox
 
 /*
     map.addLayer({
@@ -43,7 +43,6 @@ function add3D(terreno) {
 
     changeTerrain(terreno);
 } //fin funcion add3d
-
 
 function changeTerrain(terreno) {
 

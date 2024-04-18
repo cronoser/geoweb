@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "casasParque_Merindades",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Nombre": "Casa del Parque Monte Santiago", "Teléfono": "+34666189079", "website": "https://patrimonionatural.org/casas-del-parque/casas-del-parque/casa-del-parque-monte-santiago", "wikidata": "Q9035044", "wikipedia": "es:Monumento natural del Monte Santiago" }, "geometry": { "type": "Point", "coordinates": [ -3.000861097622502, 42.941033274474968 ] } },
+{ "type": "Feature", "properties": { "Nombre": "Casa del Parque del Monumento Natural de Ojo Guareña", "Teléfono": "+34947138838", "website": "https://patrimonionatural.org/casas-del-parque/casas-del-parque/casa-del-parque-ojo-guarena", "wikidata": "Q85688624", "wikipedia": null }, "geometry": { "type": "Point", "coordinates": [ -3.627023643862501, 43.056061629314613 ] } },
+{ "type": "Feature", "properties": { "Nombre": "Casa del Parque natural Montes Obarenes - San Zadornil", "Teléfono": "+34947447598", "website": "https://patrimonionatural.org/casas-del-parque/casas-del-parque/casa-del-parque-de-montes-obarenes-san-zadornil-san-zadornil", "wikidata": null, "wikipedia": null }, "geometry": { "type": "Point", "coordinates": [ -3.159413599375587, 42.842491998765432 ] } },
+{ "type": "Feature", "properties": { "Nombre": "Casa del Parque Natural Montes Obarenes", "Teléfono": "+34947567971", "website": "https://patrimonionatural.org/casas-del-parque/casas-del-parque/casa-del-parque-de-montes-obarenes-san-zadornil-ona", "wikidata": null, "wikipedia": null }, "geometry": { "type": "Point", "coordinates": [ -3.410774490670595, 42.734195064458092 ] } }
+]
+}
